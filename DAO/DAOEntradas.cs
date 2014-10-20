@@ -166,6 +166,51 @@ namespace DAO
             return lista;
         }
 
+        public int EntradasDisponibles(int idFiesta)
+        {
+            string sentencia = "select COUNT(*) as cant from Entradas1 where usado=0 and FiestaID=" + idFiesta + "";
+            conexion.Conectar();
+            int cant = 0;
+            DataTable tabla = conexion.LeerDatos(sentencia);
+            foreach (DataRow dr in tabla.Rows)
+            {
+                cant= Convert.ToInt32( dr["cant"]);               
+               
+            }
+            conexion.Desconectar();
+            return cant;
+        }
+
+        public int EntradasUsadas(int idFiesta)
+        {
+            string sentencia = "select COUNT(*) as cant from Entradas1 where usado=1 and FiestaID=" + idFiesta + "";
+            conexion.Conectar();
+            int cant = 0;
+            DataTable tabla = conexion.LeerDatos(sentencia);
+            foreach (DataRow dr in tabla.Rows)
+            {
+                cant = Convert.ToInt32(dr["cant"]);
+
+            }
+            conexion.Desconectar();
+            return cant;
+        }
+
+        public int EntradasAnuladas(int idFiesta)
+        {
+            string sentencia = "select COUNT(*) as cant from Entradas1 where usado=2 and FiestaID=" + idFiesta + "";
+            conexion.Conectar();
+            int cant = 0;
+            DataTable tabla = conexion.LeerDatos(sentencia);
+            foreach (DataRow dr in tabla.Rows)
+            {
+                cant = Convert.ToInt32(dr["cant"]);
+
+            }
+            conexion.Desconectar();
+            return cant;
+        }
+
 
 
         public void IngresarEntrada(Entrada oEntrada)

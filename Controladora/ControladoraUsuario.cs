@@ -19,6 +19,19 @@ namespace Controladora
             return Lista;
         }
 
+        public void Modificar(Usuario oUsuario)
+        {
+            try
+            {
+                DaoUsuario.ModificarUsuario(oUsuario);
+            }
+            catch
+            {
+                throw new Exception("Error al verificar usuarios");
+            }
+        }
+
+
         public Usuario TraerUsuarioLogin(string usu, string contraseña)
         {
             try

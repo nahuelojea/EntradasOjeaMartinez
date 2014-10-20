@@ -46,10 +46,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ABMColegios.cs">
+    <Compile Include="Properties\ABMColegios.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ABMColegios.Designer.cs">
+    <Compile Include="Properties\ABMColegios.Designer.cs">
       <DependentUpon>ABMColegios.cs</DependentUpon>
     </Compile>
     <Compile Include="AgregarColegio.cs">
@@ -75,6 +75,18 @@
     </Compile>
     <Compile Include="AnularEntrada2.Designer.cs">
       <DependentUpon>AnularEntrada2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CambioContraseña.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CambioContraseña.Designer.cs">
+      <DependentUpon>CambioContraseña.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ConfirmaModifacionNumeracion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConfirmaModifacionNumeracion.Designer.cs">
+      <DependentUpon>ConfirmaModifacionNumeracion.cs</DependentUpon>
     </Compile>
     <Compile Include="EliminarColegio.cs">
       <SubType>Form</SubType>
@@ -192,7 +204,7 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="ABMColegios.resx">
+    <EmbeddedResource Include="Properties\ABMColegios.resx">
       <DependentUpon>ABMColegios.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AgregarColegio.resx">
@@ -206,6 +218,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="AnularEntrada2.resx">
       <DependentUpon>AnularEntrada2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CambioContraseña.resx">
+      <DependentUpon>CambioContraseña.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConfirmaModifacionNumeracion.resx">
+      <DependentUpon>ConfirmaModifacionNumeracion.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="EliminarColegio.resx">
       <DependentUpon>EliminarColegio.cs</DependentUpon>

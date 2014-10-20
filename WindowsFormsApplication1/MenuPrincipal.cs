@@ -39,14 +39,24 @@ namespace WindowsFormsApplication1
 
         private void salonesToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            ABMSalones form = new ABMSalones();
-            form.Show();
+            if (oUsuario.Nivel == 2)
+            {
+                ABMSalones form = new ABMSalones();
+                form.Show();
+            }
+            else
+                MessageBox.Show("Usted no tiene acceso a esta parte del sistema");
         }
 
         private void fiestasToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            if (oUsuario.Nivel == 2)
+            {
             MenuFiestas form = new MenuFiestas();
             form.Show();
+            }
+            else
+                MessageBox.Show("Usted no tiene acceso a esta parte del sistema");
         }
 
         private void ventaDeEntradasToolStripMenuItem_Click(object sender, EventArgs e)
@@ -57,8 +67,13 @@ namespace WindowsFormsApplication1
 
         private void ingresoALaFiestaToolStripMenuItem_Click(object sender, EventArgs e)
         {
+             if (oUsuario.Nivel == 2)
+            {
             IngresoFiesta1 form = new IngresoFiesta1();
             form.Show();
+            }
+             else
+                 MessageBox.Show("Usted no tiene acceso a esta parte del sistema");
         }
 
         private void modificaionDeEntradasToolStripMenuItem_Click(object sender, EventArgs e)
@@ -69,14 +84,35 @@ namespace WindowsFormsApplication1
 
         private void colegiosToolStripMenuItem_Click(object sender, EventArgs e)
         {
+              if (oUsuario.Nivel == 2)
+            {
             ABMColegios form = new ABMColegios();
             form.Show();
+            }
+              else
+                  MessageBox.Show("Usted no tiene acceso a esta parte del sistema");
         }
 
         private void anulacionDeEntradasToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            AnularEntrada1 form = new AnularEntrada1();
-            form.Show();
+            if (oUsuario.Nivel == 2)
+            {
+                AnularEntrada1 form = new AnularEntrada1();
+                form.Show();
+            }
+            else
+                MessageBox.Show("Usted no tiene acceso a esta parte del sistema");
+        }
+
+        private void cambioDeContraseñaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (oUsuario.Nivel == 2)
+            {
+                CambioContraseña form = new CambioContraseña();
+                form.Show();
+            }
+            else
+                MessageBox.Show("Usted no tiene acceso a esta parte del sistema");
         }
     }
 }

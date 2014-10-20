@@ -110,7 +110,7 @@
             this.label3.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold);
             this.label3.Location = new System.Drawing.Point(392, 13);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(69, 18);
+            this.label3.Size = new System.Drawing.Size(67, 18);
             this.label3.TabIndex = 38;
             this.label3.Text = "Numero";
             // 
@@ -137,8 +137,8 @@
             this.txtnro.Name = "txtnro";
             this.txtnro.Size = new System.Drawing.Size(100, 20);
             this.txtnro.TabIndex = 35;
-            this.txtnro.Text = "00000001";
             this.txtnro.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtnro.TextChanged += new System.EventHandler(this.txtnro_TextChanged);
             // 
             // txtapellido
             // 
@@ -170,7 +170,7 @@
             this.label1.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold);
             this.label1.Location = new System.Drawing.Point(26, 101);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(68, 18);
+            this.label1.Size = new System.Drawing.Size(67, 18);
             this.label1.TabIndex = 31;
             this.label1.Text = "Nombre";
             // 
@@ -207,7 +207,7 @@
             this.Controls.Add(this.button1);
             this.Name = "VentaEntrada3";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Form7";
+            this.Text = "Entrada";
             this.Load += new System.EventHandler(this.Form7_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

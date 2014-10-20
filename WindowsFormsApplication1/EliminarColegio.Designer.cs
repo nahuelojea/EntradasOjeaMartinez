@@ -71,7 +71,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.Si);
             this.Name = "EliminarColegio";
-            this.Text = "EliminarColegio";
+            this.Text = "Eliminar Colegio";
             this.Load += new System.EventHandler(this.EliminarColegio_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

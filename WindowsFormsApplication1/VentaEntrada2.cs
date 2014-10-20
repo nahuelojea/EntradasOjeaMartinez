@@ -48,11 +48,22 @@ namespace WindowsFormsApplication1
             dataGridView1.DataSource = ControladoraEntradas.TraerEntradasxFiesta(idFiesta);
             dataGridView1.Columns["FiestaID1"].Visible = false;
             dataGridView1.Columns["Id"].Visible = false;
-            foreach (DataGridViewRow row in dataGridView1.Rows)
-                if (Convert.ToInt32(row.Cells[6].Value) == 1)
-                {
-                    row.DefaultCellStyle.BackColor = Color.Red;
-                }
+             dataGridView1.Columns["USADA"].Visible = false;
+             foreach (DataGridViewRow row in dataGridView1.Rows)
+             {
+                 if (Convert.ToInt32(row.Cells[6].Value) == 0)
+                 {
+                     row.DefaultCellStyle.BackColor = Color.Green;
+                 }
+                 if (Convert.ToInt32(row.Cells[6].Value) == 1)
+                 {
+                     row.DefaultCellStyle.BackColor = Color.Red;
+                 }
+                 if (Convert.ToInt32(row.Cells[6].Value) == 2)
+                 {
+                     row.DefaultCellStyle.BackColor = Color.SlateGray;
+                 }
+             }
 
             }
             catch (Exception ex)

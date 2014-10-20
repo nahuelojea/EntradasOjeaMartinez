@@ -80,5 +80,10 @@ namespace WindowsFormsApplication1
         {
             this.Close();
         }
+
+        private void txtnro_TextChanged(object sender, EventArgs e)
+        {
+            
+        }
     }
 }

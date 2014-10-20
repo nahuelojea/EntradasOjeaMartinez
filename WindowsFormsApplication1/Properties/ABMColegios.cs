@@ -26,6 +26,7 @@ namespace WindowsFormsApplication1
             try
             {
             dataGridView1.DataSource = ControladoraColegios.TraerColegios();
+            dataGridView1.Columns["ID"].Visible = false;
             }
             catch (Exception ex)
             {
@@ -88,6 +89,11 @@ namespace WindowsFormsApplication1
             {
                 MessageBox.Show(ex.Message);
             }
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

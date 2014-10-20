@@ -72,7 +72,7 @@
             this.Controls.Add(this.Si);
             this.Name = "EliminarSalon";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "EliminarSalon";
+            this.Text = "Eliminar Salon";
             this.Load += new System.EventHandler(this.EliminarSalon_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
