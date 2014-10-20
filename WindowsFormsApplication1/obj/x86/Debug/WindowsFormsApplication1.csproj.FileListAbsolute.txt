@@ -176,3 +176,6 @@ C:\Users\Nau\Desktop\Entrada\WindowsFormsApplication1\obj\x86\Debug\WindowsForms
 C:\Users\Nau\Desktop\Entrada\WindowsFormsApplication1\obj\x86\Debug\WindowsFormsApplication1.VentaEntrada2.resources
 C:\Users\Nau\Desktop\Entrada\WindowsFormsApplication1\obj\x86\Debug\WindowsFormsApplication1.Properties.Resources.resources
 C:\Users\Nau\Desktop\Entrada\WindowsFormsApplication1\obj\x86\Debug\WindowsFormsApplication1.csproj.GenerateResource.Cache
+C:\Users\Nau\Desktop\Entrada\Entradas\WindowsFormsApplication1\obj\x86\Debug\WindowsFormsApplication1.csproj.ResolveComReference.cache
+C:\Users\Nau\Desktop\Entrada\Entradas\WindowsFormsApplication1\obj\x86\Debug\WindowsFormsApplication1.exe
+C:\Users\Nau\Desktop\Entrada\Entradas\WindowsFormsApplication1\obj\x86\Debug\WindowsFormsApplication1.pdb
