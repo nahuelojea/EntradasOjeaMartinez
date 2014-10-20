@@ -83,6 +83,21 @@ namespace Controladora
             return false;
         }
 
+        public int CantEntradasDisponibles(int idfiesta)
+        {
+            int cant = DAOEntradas.EntradasDisponibles(idfiesta);
+            return cant;
+        }
+        public int CantEntradasAnuladas(int idfiesta)
+        {
+            int cant = DAOEntradas.EntradasAnuladas(idfiesta);
+            return cant;
+        }
+        public int CantEntradasUsadas(int idfiesta)
+        {
+            int cant = DAOEntradas.EntradasUsadas(idfiesta);
+            return cant;
+        }
 
         public void AnularEntrada(int id)
         {

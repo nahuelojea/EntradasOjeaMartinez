@@ -171,8 +171,9 @@
             // cambioDeContraseñaToolStripMenuItem
             // 
             this.cambioDeContraseñaToolStripMenuItem.Name = "cambioDeContraseñaToolStripMenuItem";
-            this.cambioDeContraseñaToolStripMenuItem.Size = new System.Drawing.Size(193, 22);
-            this.cambioDeContraseñaToolStripMenuItem.Text = "Cambio de contraseña";
+            this.cambioDeContraseñaToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.cambioDeContraseñaToolStripMenuItem.Text = "Configuracion";
+            this.cambioDeContraseñaToolStripMenuItem.Click += new System.EventHandler(this.cambioDeContraseñaToolStripMenuItem_Click);
             // 
             // MenuPrincipal
             // 

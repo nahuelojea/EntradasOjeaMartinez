@@ -68,7 +68,6 @@ namespace WindowsFormsApplication1
                 oEntrada.NOMBRE = txtnombre.Text;
                 oEntrada.APELLIDO = txtape.Text;
                 oEntrada.DNI = Convert.ToInt32(txtdni.Text);
-                oEntrada.NRO = Convert.ToInt32(txtnro.Text);
                 if (checkBox1.Checked == true)
                 {
                     oEntrada.USADA = 1;
@@ -77,7 +76,7 @@ namespace WindowsFormsApplication1
                 {
                     oEntrada.USADA = 0;
                 }
-                if (ControladoraEntrada.VerificarNro(oEntrada.NRO) == false)
+                if (oEntrada.NRO == Convert.ToInt32(txtnro.Text))
                 {
 
                     ControladoraEntrada.ModificarEntrada(oEntrada);
@@ -88,9 +87,22 @@ namespace WindowsFormsApplication1
                 }
                 else
                 {
-                    MessageBox.Show("Ese nro de entrada ya fue utilizado");
+                    oEntrada.NRO = Convert.ToInt32(txtnro.Text);
+
+                    if (ControladoraEntrada.VerificarNro(oEntrada.NRO) == false)
+                    {
+
+                        ControladoraEntrada.ModificarEntrada(oEntrada);
+                        MessageBox.Show("Entrada modificada");
+                        ModificarEntrada form = new ModificarEntrada();
+                        form.Show();
+                        this.Close();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Ese nro de entrada ya fue utilizado");
+                    }
                 }
-            
                }
             catch (Exception ex)
             {

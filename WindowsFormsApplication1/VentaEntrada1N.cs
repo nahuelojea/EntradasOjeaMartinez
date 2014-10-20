@@ -28,6 +28,8 @@ namespace WindowsFormsApplication1
         {
             try{
             dataGridView1.DataSource = controladoraFiestas.TraerFiestas();
+            dataGridView1.Columns["ID"].Visible = false;
+         
             }
             catch (Exception ex)
             {

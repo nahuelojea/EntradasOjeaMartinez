@@ -26,10 +26,20 @@ namespace WindowsFormsApplication1
 
             dataGridView1.DataSource = ControladoraEntrada.TraerEntradasTodas();
             foreach (DataGridViewRow row in dataGridView1.Rows)
+            {
+                if (Convert.ToInt32(row.Cells[6].Value) == 0)
+                {
+                    row.DefaultCellStyle.BackColor = Color.Green;
+                }
                 if (Convert.ToInt32(row.Cells[6].Value) == 1)
                 {
                     row.DefaultCellStyle.BackColor = Color.Red;
                 }
+                if (Convert.ToInt32(row.Cells[6].Value) == 2)
+                {
+                    row.DefaultCellStyle.BackColor = Color.SlateGray;
+                }
+            }
             }
             catch (Exception ex)
             {
@@ -58,10 +68,20 @@ namespace WindowsFormsApplication1
                     dataGridView1.DataSource = ControladoraEntrada.TraerEntradasxApellido(textBox1.Text);
                 }
                 foreach (DataGridViewRow row in dataGridView1.Rows)
-                    if (Convert.ToInt32(row.Cells[5].Value) == 1)
+                {
+                    if (Convert.ToInt32(row.Cells[6].Value) == 0)
+                    {
+                        row.DefaultCellStyle.BackColor = Color.Green;
+                    }
+                    if (Convert.ToInt32(row.Cells[6].Value) == 1)
                     {
                         row.DefaultCellStyle.BackColor = Color.Red;
                     }
+                    if (Convert.ToInt32(row.Cells[6].Value) == 2)
+                    {
+                        row.DefaultCellStyle.BackColor = Color.SlateGray;
+                    }
+                }
             }
             catch (Exception ex)
             {
@@ -100,6 +120,11 @@ namespace WindowsFormsApplication1
         }
 
         private void dataGridView1_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
         {
 
         }

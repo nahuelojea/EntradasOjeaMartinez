@@ -9,7 +9,7 @@ namespace DAO
 {
     public class ConexionDatos
     {
-        SqlConnection conexion = new SqlConnection("Data Source=nahuel\\nahuel;Initial Catalog=Fiesta;Integrated Security=True");
+        SqlConnection conexion = new SqlConnection("Data Source=Fernando;Initial Catalog=Fiesta;Integrated Security=True");
         
         public void Conectar()
         {

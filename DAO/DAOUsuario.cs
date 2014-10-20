@@ -28,5 +28,14 @@ namespace DAO
             Conexion.Desconectar();
             return Lista;
         }
+        public void ModificarUsuario(Usuario oUsuario)
+        {
+            string sentencia = "update Usuarios set contraseña='" + oUsuario.Contraseña + "', nivel=" + oUsuario.Nivel + " where id=" + oUsuario.Id + "";
+            Conexion.Conectar();
+            Conexion.EjecutarSQL(sentencia);
+            Conexion.Desconectar();
+        }
+            
+
     }
 }

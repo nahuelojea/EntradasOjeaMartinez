@@ -82,13 +82,29 @@ namespace WindowsFormsApplication1
         {
             try
             {
+                txtdisponibles.Text = ControladoraEntradas.CantEntradasDisponibles(fiesta.Id).ToString();
+                txtusadas.Text= ControladoraEntradas.CantEntradasUsadas(fiesta.Id).ToString();
+                txttotal.Text = (ControladoraEntradas.CantEntradasUsadas(fiesta.Id) + ControladoraEntradas.CantEntradasDisponibles(fiesta.Id)).ToString();
                 label1.Text = "Fiesta: " + fiesta.Colegios + "";
                 dataGridView1.DataSource = ControladoraEntradas.TraerEntradasxFiesta(fiesta.Id);
+                dataGridView1.Columns["FiestaID1"].Visible = false;
+                dataGridView1.Columns["Id"].Visible = false;
+                dataGridView1.Columns["USADA"].Visible = false;
                 foreach (DataGridViewRow row in dataGridView1.Rows)
+                {
+                    if (Convert.ToInt32(row.Cells[6].Value) == 0)
+                    {
+                        row.DefaultCellStyle.BackColor = Color.Green;
+                    }
                     if (Convert.ToInt32(row.Cells[6].Value) == 1)
                     {
                         row.DefaultCellStyle.BackColor = Color.Red;
                     }
+                    if (Convert.ToInt32(row.Cells[6].Value) == 2)
+                    {
+                        row.DefaultCellStyle.BackColor = Color.SlateGray;
+                    }
+                }
 
             }
             catch (Exception ex)
@@ -114,10 +130,20 @@ namespace WindowsFormsApplication1
                         lista = ControladoraEntradas.TraerEntradasxFiestaxDNI(fiesta.Id, Convert.ToInt32(textBox1.Text));
                         dataGridView1.DataSource = lista;
                         foreach (DataGridViewRow row in dataGridView1.Rows)
+                        {
+                            if (Convert.ToInt32(row.Cells[6].Value) == 0)
+                            {
+                                row.DefaultCellStyle.BackColor = Color.Green;
+                            }
                             if (Convert.ToInt32(row.Cells[6].Value) == 1)
                             {
                                 row.DefaultCellStyle.BackColor = Color.Red;
                             }
+                            if (Convert.ToInt32(row.Cells[6].Value) == 2)
+                            {
+                                row.DefaultCellStyle.BackColor = Color.SlateGray;
+                            }
+                        }
                     }
                     else
                         MessageBox.Show("Por favor ingresar un número de DNI");
@@ -127,10 +153,20 @@ namespace WindowsFormsApplication1
                     lista = ControladoraEntradas.TraerEntradasxFiestaxApellido(fiesta.Id, textBox1.Text);
                     dataGridView1.DataSource = lista;
                     foreach (DataGridViewRow row in dataGridView1.Rows)
+                    {
+                        if (Convert.ToInt32(row.Cells[6].Value) == 0)
+                        {
+                            row.DefaultCellStyle.BackColor = Color.Green;
+                        }
                         if (Convert.ToInt32(row.Cells[6].Value) == 1)
                         {
                             row.DefaultCellStyle.BackColor = Color.Red;
                         }
+                        if (Convert.ToInt32(row.Cells[6].Value) == 2)
+                        {
+                            row.DefaultCellStyle.BackColor = Color.SlateGray;
+                        }
+                    }
                 }
                 if (radioButton3.Checked == true)
                 {
@@ -139,10 +175,20 @@ namespace WindowsFormsApplication1
                         lista = ControladoraEntradas.TraerEntradasxFiestaxNum(fiesta.Id, Convert.ToInt32(textBox1.Text));
                         dataGridView1.DataSource = lista;
                         foreach (DataGridViewRow row in dataGridView1.Rows)
+                        {
+                            if (Convert.ToInt32(row.Cells[6].Value) == 0)
+                            {
+                                row.DefaultCellStyle.BackColor = Color.Green;
+                            }
                             if (Convert.ToInt32(row.Cells[6].Value) == 1)
                             {
                                 row.DefaultCellStyle.BackColor = Color.Red;
                             }
+                            if (Convert.ToInt32(row.Cells[6].Value) == 2)
+                            {
+                                row.DefaultCellStyle.BackColor = Color.SlateGray;
+                            }
+                        }
                     }
                     else
                         MessageBox.Show("Por favor ingresar un número de Entrada");

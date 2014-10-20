@@ -124,6 +124,7 @@ namespace WindowsFormsApplication1
             try
             {
             dataGridView1.DataSource = ControladoraFiesta.TraerFiestas();
+            dataGridView1.Columns["ID"].Visible = false;
             }
             catch (Exception ex)
             {
