@@ -79,34 +79,34 @@
             // salonesToolStripMenuItem
             // 
             this.salonesToolStripMenuItem.Name = "salonesToolStripMenuItem";
-            this.salonesToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.salonesToolStripMenuItem.Size = new System.Drawing.Size(120, 22);
             this.salonesToolStripMenuItem.Text = "Salones";
             this.salonesToolStripMenuItem.Click += new System.EventHandler(this.salonesToolStripMenuItem_Click);
             // 
             // colegiosToolStripMenuItem
             // 
             this.colegiosToolStripMenuItem.Name = "colegiosToolStripMenuItem";
-            this.colegiosToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.colegiosToolStripMenuItem.Size = new System.Drawing.Size(120, 22);
             this.colegiosToolStripMenuItem.Text = "Colegios";
             this.colegiosToolStripMenuItem.Click += new System.EventHandler(this.colegiosToolStripMenuItem_Click);
             // 
             // fiestasToolStripMenuItem
             // 
             this.fiestasToolStripMenuItem.Name = "fiestasToolStripMenuItem";
-            this.fiestasToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.fiestasToolStripMenuItem.Size = new System.Drawing.Size(120, 22);
             this.fiestasToolStripMenuItem.Text = "Fiestas";
             this.fiestasToolStripMenuItem.Click += new System.EventHandler(this.fiestasToolStripMenuItem_Click);
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(149, 6);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(117, 6);
             // 
             // salirToolStripMenuItem
             // 
             this.salirToolStripMenuItem.Image = global::WindowsFormsApplication1.Properties.Resources.Logout_Icon_16;
             this.salirToolStripMenuItem.Name = "salirToolStripMenuItem";
-            this.salirToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.salirToolStripMenuItem.Size = new System.Drawing.Size(120, 22);
             this.salirToolStripMenuItem.Text = "Salir";
             this.salirToolStripMenuItem.Click += new System.EventHandler(this.salirToolStripMenuItem_Click);
             // 
@@ -169,14 +169,15 @@
             // 
             // entradasVendidasPorFechaToolStripMenuItem
             // 
-            this.entradasVendidasPorFechaToolStripMenuItem.Image = global::WindowsFormsApplication1.Properties.Resources.PDF_File;
+            this.entradasVendidasPorFechaToolStripMenuItem.Image = global::WindowsFormsApplication1.Properties.Resources.MS_Office_2003_Excel_Icon_16;
             this.entradasVendidasPorFechaToolStripMenuItem.Name = "entradasVendidasPorFechaToolStripMenuItem";
             this.entradasVendidasPorFechaToolStripMenuItem.Size = new System.Drawing.Size(222, 22);
             this.entradasVendidasPorFechaToolStripMenuItem.Text = "Entradas vendidas por fecha";
+            this.entradasVendidasPorFechaToolStripMenuItem.Click += new System.EventHandler(this.entradasVendidasPorFechaToolStripMenuItem_Click);
             // 
             // entradasVendidasPorFiestaToolStripMenuItem
             // 
-            this.entradasVendidasPorFiestaToolStripMenuItem.Image = global::WindowsFormsApplication1.Properties.Resources.PDF_File;
+            this.entradasVendidasPorFiestaToolStripMenuItem.Image = global::WindowsFormsApplication1.Properties.Resources.MS_Office_2003_Excel_Icon_16;
             this.entradasVendidasPorFiestaToolStripMenuItem.Name = "entradasVendidasPorFiestaToolStripMenuItem";
             this.entradasVendidasPorFiestaToolStripMenuItem.Size = new System.Drawing.Size(222, 22);
             this.entradasVendidasPorFiestaToolStripMenuItem.Text = "Entradas vendidas por fiesta";
@@ -193,7 +194,7 @@
             // 
             this.cambioDeContraseñaToolStripMenuItem.Image = global::WindowsFormsApplication1.Properties.Resources.User_Computer;
             this.cambioDeContraseñaToolStripMenuItem.Name = "cambioDeContraseñaToolStripMenuItem";
-            this.cambioDeContraseñaToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.cambioDeContraseñaToolStripMenuItem.Size = new System.Drawing.Size(150, 22);
             this.cambioDeContraseñaToolStripMenuItem.Text = "Configuracion";
             this.cambioDeContraseñaToolStripMenuItem.Click += new System.EventHandler(this.cambioDeContraseñaToolStripMenuItem_Click);
             // 
@@ -204,6 +205,7 @@
             this.BackgroundImage = global::WindowsFormsApplication1.Properties.Resources.fondomenuprincipal1;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(515, 284);
+            this.ControlBox = false;
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "MenuPrincipal";

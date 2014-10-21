@@ -31,6 +31,17 @@ namespace WindowsFormsApplication1
         {
         }
 
+        private void formFactura_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            //Impedir que el formulario se cierre pulsando X o Alt + F4 
+            switch (e.CloseReason)
+            {
+                case CloseReason.UserClosing:
+                    e.Cancel = true;
+                    break;
+            }
+        }
+
         private void archivoToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
@@ -120,6 +131,17 @@ namespace WindowsFormsApplication1
             {
                 Application.Exit();
             }
+        }
+
+        private void entradasVendidasPorFechaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (oUsuario.Nivel == 2)
+            {
+                ReportesxFecha form = new ReportesxFecha();
+                form.Show();
+            }
+            else
+                MessageBox.Show("Usted no tiene acceso a esta parte del sistema");
         }
     }
 }

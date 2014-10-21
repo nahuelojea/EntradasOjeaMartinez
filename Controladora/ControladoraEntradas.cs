@@ -141,5 +141,11 @@ namespace Controladora
         {
             DAOEntradas.ModificarEntrada(oEntrada);
         }
+
+        public List<Entrada> TraerEntradasxfecha(string fecha)
+        {
+            List<Entrada> lista = DAOEntradas.TraerEntradasxFecha(fecha);
+            return lista;
+        }
     }
 }

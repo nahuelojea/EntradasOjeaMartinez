@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.label3 = new System.Windows.Forms.Label();
@@ -55,7 +54,7 @@
             this.groupBox1.ForeColor = System.Drawing.SystemColors.HotTrack;
             this.groupBox1.Location = new System.Drawing.Point(49, 24);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(691, 423);
+            this.groupBox1.Size = new System.Drawing.Size(978, 488);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Busqueda de Fiesta";
@@ -67,30 +66,21 @@
             this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.AllowUserToOrderColumns = true;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle1;
-            this.dataGridView1.Location = new System.Drawing.Point(71, 205);
+            this.dataGridView1.Location = new System.Drawing.Point(124, 166);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(571, 184);
+            this.dataGridView1.Size = new System.Drawing.Size(736, 301);
             this.dataGridView1.TabIndex = 25;
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             this.dataGridView1.DoubleClick += new System.EventHandler(this.button3_Click);
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label3.Location = new System.Drawing.Point(375, 63);
+            this.label3.Location = new System.Drawing.Point(631, 66);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(57, 18);
+            this.label3.Size = new System.Drawing.Size(58, 18);
             this.label3.TabIndex = 15;
             this.label3.Text = "Fecha:";
             // 
@@ -99,7 +89,7 @@
             this.dateTimePicker1.CustomFormat = "";
             this.dateTimePicker1.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold);
             this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker1.Location = new System.Drawing.Point(460, 60);
+            this.dateTimePicker1.Location = new System.Drawing.Point(707, 60);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(170, 26);
             this.dateTimePicker1.TabIndex = 14;
@@ -138,18 +128,18 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold);
+            this.label1.Font = new System.Drawing.Font("Tahoma", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label1.Location = new System.Drawing.Point(306, 161);
+            this.label1.Location = new System.Drawing.Point(436, 124);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(62, 18);
+            this.label1.Size = new System.Drawing.Size(96, 29);
             this.label1.TabIndex = 8;
             this.label1.Text = "Fiestas";
             // 
             // button2
             // 
             this.button2.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold);
-            this.button2.Location = new System.Drawing.Point(683, 465);
+            this.button2.Location = new System.Drawing.Point(907, 518);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(86, 41);
             this.button2.TabIndex = 14;
@@ -161,12 +151,12 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(781, 518);
+            this.ClientSize = new System.Drawing.Size(1055, 571);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.groupBox1);
             this.Name = "IngresoFiesta1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Ingreso a Fiesta";
+            this.Text = "Ingreso a Fiestas";
             this.Load += new System.EventHandler(this.Form10_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();

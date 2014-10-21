@@ -265,5 +265,22 @@ namespace DAO
             conexion.EjecutarSQL(sentencia);
             conexion.Desconectar();
         }
+
+        public List<Entrada> TraerEntradasxFecha(string fecha)
+        {
+            conexion.Conectar();
+            List<Entrada> lista = new List<Entrada>();
+            string sentencia = "select e.ID, FiestaID, nombre, apellido, usado, DNI, nro, nombrefiesta, e.precio from Entradas1 e inner join Fiestas f on f.ID = e.FiestaID where fecha = '"+fecha+"' and usado != 2";
+            DataTable tabla = conexion.LeerDatos(sentencia);
+            foreach (DataRow dr in tabla.Rows)
+            {
+                Entrada oEntrada = new Entrada(Convert.ToInt32(dr["DNI"]), dr["apellido"].ToString(), dr["nombre"].ToString(), Convert.ToInt32(dr["nro"]), Convert.ToInt32(dr["usado"]), Convert.ToInt32(dr["FiestaID"]), dr["nombrefiesta"].ToString(), Convert.ToDecimal(dr["precio"]));
+                oEntrada.Id = Convert.ToInt32(dr["ID"]);
+                lista.Add(oEntrada);
+            }
+            conexion.Desconectar();
+            return lista;
+        }
+
     }
 }

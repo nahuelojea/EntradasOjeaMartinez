@@ -20,7 +20,6 @@ namespace DAO
             {
                 Fiesta oFiesta = new Fiesta(dr["colegios"].ToString(), Convert.ToDecimal(dr["precio"]), dr["cursos"].ToString(), dr["salon"].ToString(), (dr["fecha"].ToString()));
                 oFiesta.Id = Convert.ToInt32(dr["ID"]);
-
                 lista.Add(oFiesta);
             }
             conexion.Desconectar();

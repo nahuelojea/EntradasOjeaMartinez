@@ -63,6 +63,16 @@ namespace WindowsFormsApplication1.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Adobe_PDF_Document_Icon_48 {
+            get {
+                object obj = ResourceManager.GetObject("Adobe_PDF_Document_Icon_48", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Cash_register_Icon_16 {
             get {
                 object obj = ResourceManager.GetObject("Cash_register_Icon_16", resourceCulture);
@@ -133,6 +143,26 @@ namespace WindowsFormsApplication1.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap MS_Office_2003_Excel_Icon_16 {
+            get {
+                object obj = ResourceManager.GetObject("MS_Office_2003_Excel_Icon_16", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap MS_Office_2003_Excel_Icon_48 {
+            get {
+                object obj = ResourceManager.GetObject("MS_Office_2003_Excel_Icon_48", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Padlock_User_Control {
             get {
                 object obj = ResourceManager.GetObject("Padlock User Control", resourceCulture);
@@ -156,6 +186,16 @@ namespace WindowsFormsApplication1.Properties {
         internal static System.Drawing.Bitmap PDF_File {
             get {
                 object obj = ResourceManager.GetObject("PDF.File", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap PDF1 {
+            get {
+                object obj = ResourceManager.GetObject("PDF1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

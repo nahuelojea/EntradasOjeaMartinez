@@ -121,23 +121,32 @@
   <data name="User Computer" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\User Computer.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="fondomenuprincipal1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\fondomenuprincipal1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Padlock User Control1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Padlock User Control1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="design_team_256" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\design_team_256.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Padlock User Control" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Padlock User Control.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Cash_register_Icon_16" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Cash_register_Icon_16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="MS_Office_2003_Excel_Icon_48" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\MS_Office_2003_Excel_Icon_48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="PDF.File" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\PDF.File.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Adobe_PDF_Document_Icon_48" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Adobe_PDF_Document_Icon_48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="design_team_256" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\design_team_256.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="fondomenuprincipal1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\fondomenuprincipal1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Check_Icon_16" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Check_Icon_16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Padlock User Control" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Padlock User Control.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Padlock User Control1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Padlock User Control1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Logout_Icon_16" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Logout_Icon_16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -148,7 +157,10 @@
   <data name="Check_Icon_161" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Check_Icon_161.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="PDF.File" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\PDF.File.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="PDF1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\PDF.File1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="MS_Office_2003_Excel_Icon_16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\MS_Office_2003_Excel_Icon_16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

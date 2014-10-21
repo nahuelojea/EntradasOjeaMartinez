@@ -196,11 +196,11 @@
     <Compile Include="ModificarSalon.Designer.cs">
       <DependentUpon>ModificarSalon.cs</DependentUpon>
     </Compile>
-    <Compile Include="Reportes.cs">
+    <Compile Include="ReportesxFecha.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Reportes.Designer.cs">
-      <DependentUpon>Reportes.cs</DependentUpon>
+    <Compile Include="ReportesxFecha.Designer.cs">
+      <DependentUpon>ReportesxFecha.cs</DependentUpon>
     </Compile>
     <Compile Include="Settings.cs" />
     <Compile Include="VentaEntrada1N.cs">
@@ -295,8 +295,8 @@
     <EmbeddedResource Include="ModificarSalon.resx">
       <DependentUpon>ModificarSalon.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Reportes.resx">
-      <DependentUpon>Reportes.cs</DependentUpon>
+    <EmbeddedResource Include="ReportesxFecha.resx">
+      <DependentUpon>ReportesxFecha.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="VentaEntrada1N.resx">
       <DependentUpon>VentaEntrada1N.cs</DependentUpon>
@@ -423,6 +423,18 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\PDF.File.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PDF.File1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Adobe_PDF_Document_Icon_48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MS_Office_2003_Excel_Icon_48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MS_Office_2003_Excel_Icon_16.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

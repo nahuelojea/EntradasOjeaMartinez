@@ -260,3 +260,4 @@ C:\Users\Nau\Desktop\Entrada\Entradas\WindowsFormsApplication1\obj\x86\Debug\Win
 C:\Users\Nau\Desktop\Entrada\Entradas\WindowsFormsApplication1\obj\x86\Debug\WindowsFormsApplication1.Properties.Resources.resources
 C:\Users\Nau\Desktop\Entrada\Entradas\WindowsFormsApplication1\obj\x86\Debug\WindowsFormsApplication1.csproj.GenerateResource.Cache
 C:\Users\Nau\Desktop\Entrada\Entradas\WindowsFormsApplication1\obj\x86\Debug\WindowsFormsApplication1.Reportes.resources
+C:\Users\Nau\Desktop\Entrada\Entradas\WindowsFormsApplication1\obj\x86\Debug\WindowsFormsApplication1.ReportesxFecha.resources
