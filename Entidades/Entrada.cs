@@ -14,7 +14,9 @@ namespace Entidades
         int nro;
         int id;
         string nombrefiesta;
+        string fechaventa;
 
+       
       
         int FiestaID;
         decimal precio;
@@ -75,8 +77,14 @@ namespace Entidades
             get { return id; }
             set { id = value; }
         }
+        public string Fechaventa
+        {
+            get { return fechaventa; }
+            set { fechaventa = value; }
+        }
 
-        public Entrada(int dn, string ape, string nom, int nr, int us, int fiest,string nombfie, decimal precio)
+
+        public Entrada(int dn, string ape, string nom, int nr, int us, int fiest,string nombfie, decimal precio, string fechaventa1)
         {
             this.dni = dn;
             this.apellido = ape;
@@ -86,6 +94,7 @@ namespace Entidades
             this.FiestaID = fiest;
             this.precio = precio;
             this.nombrefiesta = nombfie;
+            this.fechaventa = fechaventa1;
         }
 
         public Entrada()

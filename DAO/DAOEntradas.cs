@@ -18,7 +18,7 @@ namespace DAO
             DataTable tabla = conexion.LeerDatos(sentencia);
             foreach (DataRow dr in tabla.Rows)
             {
-                Entrada oEntrada = new Entrada(Convert.ToInt32(dr["DNI"]), dr["apellido"].ToString(), dr["nombre"].ToString(), Convert.ToInt32(dr["nro"]), Convert.ToInt32(dr["usado"]), Convert.ToInt32(dr["FiestaID"]), dr["nombrefiesta"].ToString(), Convert.ToDecimal(dr["precio"]));
+                Entrada oEntrada = new Entrada(Convert.ToInt32(dr["DNI"]), dr["apellido"].ToString(), dr["nombre"].ToString(), Convert.ToInt32(dr["nro"]), Convert.ToInt32(dr["usado"]), Convert.ToInt32(dr["FiestaID"]), dr["nombrefiesta"].ToString(), Convert.ToDecimal(dr["precio"]), dr["fechaventa"].ToString());
                 oEntrada.Id = Convert.ToInt32(dr["ID"]);
                 lista.Add(oEntrada);
             }
@@ -34,7 +34,7 @@ namespace DAO
             DataTable tabla = conexion.LeerDatos(sentencia);
             foreach (DataRow dr in tabla.Rows)
             {
-                Entrada oEntrada = new Entrada(Convert.ToInt32(dr["DNI"]), dr["apellido"].ToString(), dr["nombre"].ToString(), Convert.ToInt32(dr["nro"]), Convert.ToInt32(dr["usado"]), Convert.ToInt32(dr["FiestaID"]), dr["nombrefiesta"].ToString(), Convert.ToDecimal(dr["precio"]));
+                Entrada oEntrada = new Entrada(Convert.ToInt32(dr["DNI"]), dr["apellido"].ToString(), dr["nombre"].ToString(), Convert.ToInt32(dr["nro"]), Convert.ToInt32(dr["usado"]), Convert.ToInt32(dr["FiestaID"]), dr["nombrefiesta"].ToString(), Convert.ToDecimal(dr["precio"]), dr["fechaventa"].ToString());
                 oEntrada.Id = Convert.ToInt32(dr["ID"]);
                 lista.Add(oEntrada);
             }
@@ -50,7 +50,7 @@ namespace DAO
             DataTable tabla = conexion.LeerDatos(sentencia);
             foreach (DataRow dr in tabla.Rows)
             {
-                Entrada oEntrada = new Entrada(Convert.ToInt32(dr["DNI"]), dr["apellido"].ToString(), dr["nombre"].ToString(), Convert.ToInt32(dr["nro"]), Convert.ToInt32(dr["usado"]), Convert.ToInt32(dr["FiestaID"]), dr["nombrefiesta"].ToString(), Convert.ToDecimal(dr["precio"]));
+                Entrada oEntrada = new Entrada(Convert.ToInt32(dr["DNI"]), dr["apellido"].ToString(), dr["nombre"].ToString(), Convert.ToInt32(dr["nro"]), Convert.ToInt32(dr["usado"]), Convert.ToInt32(dr["FiestaID"]), dr["nombrefiesta"].ToString(), Convert.ToDecimal(dr["precio"]), dr["fechaventa"].ToString());
                 oEntrada.Id = Convert.ToInt32(dr["ID"]);
                 lista.Add(oEntrada);
             }
@@ -66,7 +66,7 @@ namespace DAO
             DataTable tabla = conexion.LeerDatos(sentencia);
             foreach (DataRow dr in tabla.Rows)
             {
-                Entrada oEntrada = new Entrada(Convert.ToInt32(dr["DNI"]), dr["apellido"].ToString(), dr["nombre"].ToString(), Convert.ToInt32(dr["nro"]), Convert.ToInt32(dr["usado"]), Convert.ToInt32(dr["FiestaID"]), dr["nombrefiesta"].ToString(), Convert.ToDecimal(dr["precio"]));
+                Entrada oEntrada = new Entrada(Convert.ToInt32(dr["DNI"]), dr["apellido"].ToString(), dr["nombre"].ToString(), Convert.ToInt32(dr["nro"]), Convert.ToInt32(dr["usado"]), Convert.ToInt32(dr["FiestaID"]), dr["nombrefiesta"].ToString(), Convert.ToDecimal(dr["precio"]), dr["fechaventa"].ToString());
                 oEntrada.Id = Convert.ToInt32(dr["ID"]);
                 lista.Add(oEntrada);
             }
@@ -82,7 +82,7 @@ namespace DAO
             DataTable tabla = conexion.LeerDatos(sentencia);
             foreach (DataRow dr in tabla.Rows)
             {
-                Entrada oEntrada = new Entrada(Convert.ToInt32(dr["DNI"]), dr["apellido"].ToString(), dr["nombre"].ToString(), Convert.ToInt32(dr["nro"]), Convert.ToInt32(dr["usado"]), Convert.ToInt32(dr["FiestaID"]), dr["nombrefiesta"].ToString(), Convert.ToDecimal(dr["precio"]));
+                Entrada oEntrada = new Entrada(Convert.ToInt32(dr["DNI"]), dr["apellido"].ToString(), dr["nombre"].ToString(), Convert.ToInt32(dr["nro"]), Convert.ToInt32(dr["usado"]), Convert.ToInt32(dr["FiestaID"]), dr["nombrefiesta"].ToString(), Convert.ToDecimal(dr["precio"]), dr["fechaventa"].ToString());
                 oEntrada.Id = Convert.ToInt32(dr["ID"]);
                 lista.Add(oEntrada);
             }
@@ -108,7 +108,7 @@ namespace DAO
             DataTable tabla = conexion.LeerDatos(sentencia);
             foreach (DataRow dr in tabla.Rows)
             {
-                Entrada oEntrada = new Entrada(Convert.ToInt32(dr["DNI"]), dr["apellido"].ToString(), dr["nombre"].ToString(), Convert.ToInt32(dr["nro"]), Convert.ToInt32(dr["usado"]), Convert.ToInt32(dr["FiestaID"]), dr["nombrefiesta"].ToString(), Convert.ToDecimal(dr["precio"]));
+                Entrada oEntrada = new Entrada(Convert.ToInt32(dr["DNI"]), dr["apellido"].ToString(), dr["nombre"].ToString(), Convert.ToInt32(dr["nro"]), Convert.ToInt32(dr["usado"]), Convert.ToInt32(dr["FiestaID"]), dr["nombrefiesta"].ToString(), Convert.ToDecimal(dr["precio"]), dr["fechaventa"].ToString());
                 oEntrada.Id = Convert.ToInt32(dr["ID"]);
                 lista.Add(oEntrada);
             }
@@ -125,7 +125,7 @@ namespace DAO
             DataTable tabla = conexion.LeerDatos(sentencia);
             foreach (DataRow dr in tabla.Rows)
             {
-                Entrada oEntrada = new Entrada(Convert.ToInt32(dr["DNI"]), dr["apellido"].ToString(), dr["nombre"].ToString(), Convert.ToInt32(dr["nro"]), Convert.ToInt32(dr["usado"]), Convert.ToInt32(dr["FiestaID"]), dr["nombrefiesta"].ToString(), Convert.ToDecimal(dr["precio"]));
+                Entrada oEntrada = new Entrada(Convert.ToInt32(dr["DNI"]), dr["apellido"].ToString(), dr["nombre"].ToString(), Convert.ToInt32(dr["nro"]), Convert.ToInt32(dr["usado"]), Convert.ToInt32(dr["FiestaID"]), dr["nombrefiesta"].ToString(), Convert.ToDecimal(dr["precio"]), dr["fechaventa"].ToString());
                 oEntrada.Id = Convert.ToInt32(dr["ID"]);
                 lista.Add(oEntrada);
             }
@@ -142,7 +142,7 @@ namespace DAO
             DataTable tabla = conexion.LeerDatos(sentencia);
             foreach (DataRow dr in tabla.Rows)
             {
-                Entrada oEntrada = new Entrada(Convert.ToInt32(dr["DNI"]), dr["apellido"].ToString(), dr["nombre"].ToString(), Convert.ToInt32(dr["nro"]), Convert.ToInt32(dr["usado"]), Convert.ToInt32(dr["FiestaID"]), dr["nombrefiesta"].ToString(), Convert.ToDecimal(dr["precio"]));
+                Entrada oEntrada = new Entrada(Convert.ToInt32(dr["DNI"]), dr["apellido"].ToString(), dr["nombre"].ToString(), Convert.ToInt32(dr["nro"]), Convert.ToInt32(dr["usado"]), Convert.ToInt32(dr["FiestaID"]), dr["nombrefiesta"].ToString(), Convert.ToDecimal(dr["precio"]), dr["fechaventa"].ToString());
                 oEntrada.Id = Convert.ToInt32(dr["ID"]);
                 lista.Add(oEntrada);
             }
@@ -158,7 +158,7 @@ namespace DAO
             DataTable tabla = conexion.LeerDatos(sentencia);
             foreach (DataRow dr in tabla.Rows)
             {
-                Entrada oEntrada = new Entrada(Convert.ToInt32(dr["DNI"]), dr["apellido"].ToString(), dr["nombre"].ToString(), Convert.ToInt32(dr["nro"]), Convert.ToInt32(dr["usado"]), Convert.ToInt32(dr["FiestaID"]), dr["nombrefiesta"].ToString(), Convert.ToDecimal(dr["precio"]));
+                Entrada oEntrada = new Entrada(Convert.ToInt32(dr["DNI"]), dr["apellido"].ToString(), dr["nombre"].ToString(), Convert.ToInt32(dr["nro"]), Convert.ToInt32(dr["usado"]), Convert.ToInt32(dr["FiestaID"]), dr["nombrefiesta"].ToString(), Convert.ToDecimal(dr["precio"]), dr["fechaventa"].ToString());
                 oEntrada.Id = Convert.ToInt32(dr["ID"]);
                 lista.Add(oEntrada);
             }
@@ -216,7 +216,7 @@ namespace DAO
         public void IngresarEntrada(Entrada oEntrada)
         {
 
-            string sentencia = "insert into Entradas1(DNI, apellido, nombre,nro,usado,fiestaID,nombrefiesta, precio) values(" + oEntrada.DNI + ",'" + oEntrada.APELLIDO + "','" + oEntrada.NOMBRE + "'," + oEntrada.NRO + "," + oEntrada.USADA + "," + oEntrada.FiestaID1 + ",'" + oEntrada.Nombrefiesta + "', " + Convert.ToInt32(oEntrada.Precio) + ")";
+            string sentencia = "insert into Entradas1(DNI, apellido, nombre,nro,usado,fiestaID,nombrefiesta, precio, fechaventa) values(" + oEntrada.DNI + ",'" + oEntrada.APELLIDO + "','" + oEntrada.NOMBRE + "'," + oEntrada.NRO + "," + oEntrada.USADA + "," + oEntrada.FiestaID1 + ",'" + oEntrada.Nombrefiesta + "', " + Convert.ToInt32(oEntrada.Precio) + ", '"+oEntrada.Fechaventa+"')";
             conexion.Conectar();
             conexion.EjecutarSQL(sentencia);
             conexion.Desconectar();
@@ -270,11 +270,11 @@ namespace DAO
         {
             conexion.Conectar();
             List<Entrada> lista = new List<Entrada>();
-            string sentencia = "select e.ID, FiestaID, nombre, apellido, usado, DNI, nro, nombrefiesta, e.precio from Entradas1 e inner join Fiestas f on f.ID = e.FiestaID where fecha = '"+fecha+"' and usado != 2";
+            string sentencia = "select * from Entradas1 where fechaventa='"+fecha+"'";
             DataTable tabla = conexion.LeerDatos(sentencia);
             foreach (DataRow dr in tabla.Rows)
             {
-                Entrada oEntrada = new Entrada(Convert.ToInt32(dr["DNI"]), dr["apellido"].ToString(), dr["nombre"].ToString(), Convert.ToInt32(dr["nro"]), Convert.ToInt32(dr["usado"]), Convert.ToInt32(dr["FiestaID"]), dr["nombrefiesta"].ToString(), Convert.ToDecimal(dr["precio"]));
+                Entrada oEntrada = new Entrada(Convert.ToInt32(dr["DNI"]), dr["apellido"].ToString(), dr["nombre"].ToString(), Convert.ToInt32(dr["nro"]), Convert.ToInt32(dr["usado"]), Convert.ToInt32(dr["FiestaID"]), dr["nombrefiesta"].ToString(), Convert.ToDecimal(dr["precio"]), dr["fechaventa"].ToString());
                 oEntrada.Id = Convert.ToInt32(dr["ID"]);
                 lista.Add(oEntrada);
             }
