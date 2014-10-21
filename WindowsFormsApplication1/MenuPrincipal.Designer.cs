@@ -33,6 +33,8 @@
             this.salonesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.colegiosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.fiestasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.salirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ventaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ventaDeEntradasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.modificaionDeEntradasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -66,7 +68,9 @@
             this.archivoToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.salonesToolStripMenuItem,
             this.colegiosToolStripMenuItem,
-            this.fiestasToolStripMenuItem});
+            this.fiestasToolStripMenuItem,
+            this.toolStripSeparator1,
+            this.salirToolStripMenuItem});
             this.archivoToolStripMenuItem.Name = "archivoToolStripMenuItem";
             this.archivoToolStripMenuItem.Size = new System.Drawing.Size(60, 20);
             this.archivoToolStripMenuItem.Text = "Archivo";
@@ -75,23 +79,36 @@
             // salonesToolStripMenuItem
             // 
             this.salonesToolStripMenuItem.Name = "salonesToolStripMenuItem";
-            this.salonesToolStripMenuItem.Size = new System.Drawing.Size(120, 22);
+            this.salonesToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.salonesToolStripMenuItem.Text = "Salones";
             this.salonesToolStripMenuItem.Click += new System.EventHandler(this.salonesToolStripMenuItem_Click);
             // 
             // colegiosToolStripMenuItem
             // 
             this.colegiosToolStripMenuItem.Name = "colegiosToolStripMenuItem";
-            this.colegiosToolStripMenuItem.Size = new System.Drawing.Size(120, 22);
+            this.colegiosToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.colegiosToolStripMenuItem.Text = "Colegios";
             this.colegiosToolStripMenuItem.Click += new System.EventHandler(this.colegiosToolStripMenuItem_Click);
             // 
             // fiestasToolStripMenuItem
             // 
             this.fiestasToolStripMenuItem.Name = "fiestasToolStripMenuItem";
-            this.fiestasToolStripMenuItem.Size = new System.Drawing.Size(120, 22);
+            this.fiestasToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.fiestasToolStripMenuItem.Text = "Fiestas";
             this.fiestasToolStripMenuItem.Click += new System.EventHandler(this.fiestasToolStripMenuItem_Click);
+            // 
+            // toolStripSeparator1
+            // 
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(149, 6);
+            // 
+            // salirToolStripMenuItem
+            // 
+            this.salirToolStripMenuItem.Image = global::WindowsFormsApplication1.Properties.Resources.Logout_Icon_16;
+            this.salirToolStripMenuItem.Name = "salirToolStripMenuItem";
+            this.salirToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.salirToolStripMenuItem.Text = "Salir";
+            this.salirToolStripMenuItem.Click += new System.EventHandler(this.salirToolStripMenuItem_Click);
             // 
             // ventaToolStripMenuItem
             // 
@@ -105,6 +122,7 @@
             // 
             // ventaDeEntradasToolStripMenuItem
             // 
+            this.ventaDeEntradasToolStripMenuItem.Image = global::WindowsFormsApplication1.Properties.Resources.Cash_register_Icon_16;
             this.ventaDeEntradasToolStripMenuItem.Name = "ventaDeEntradasToolStripMenuItem";
             this.ventaDeEntradasToolStripMenuItem.Size = new System.Drawing.Size(208, 22);
             this.ventaDeEntradasToolStripMenuItem.Text = "Venta de entradas";
@@ -134,6 +152,7 @@
             // 
             // ingresoALaFiestaToolStripMenuItem
             // 
+            this.ingresoALaFiestaToolStripMenuItem.Image = global::WindowsFormsApplication1.Properties.Resources.Check_Icon_161;
             this.ingresoALaFiestaToolStripMenuItem.Name = "ingresoALaFiestaToolStripMenuItem";
             this.ingresoALaFiestaToolStripMenuItem.Size = new System.Drawing.Size(165, 22);
             this.ingresoALaFiestaToolStripMenuItem.Text = "Ingreso a la fiesta";
@@ -150,12 +169,14 @@
             // 
             // entradasVendidasPorFechaToolStripMenuItem
             // 
+            this.entradasVendidasPorFechaToolStripMenuItem.Image = global::WindowsFormsApplication1.Properties.Resources.PDF_File;
             this.entradasVendidasPorFechaToolStripMenuItem.Name = "entradasVendidasPorFechaToolStripMenuItem";
             this.entradasVendidasPorFechaToolStripMenuItem.Size = new System.Drawing.Size(222, 22);
             this.entradasVendidasPorFechaToolStripMenuItem.Text = "Entradas vendidas por fecha";
             // 
             // entradasVendidasPorFiestaToolStripMenuItem
             // 
+            this.entradasVendidasPorFiestaToolStripMenuItem.Image = global::WindowsFormsApplication1.Properties.Resources.PDF_File;
             this.entradasVendidasPorFiestaToolStripMenuItem.Name = "entradasVendidasPorFiestaToolStripMenuItem";
             this.entradasVendidasPorFiestaToolStripMenuItem.Size = new System.Drawing.Size(222, 22);
             this.entradasVendidasPorFiestaToolStripMenuItem.Text = "Entradas vendidas por fiesta";
@@ -170,6 +191,7 @@
             // 
             // cambioDeContraseñaToolStripMenuItem
             // 
+            this.cambioDeContraseñaToolStripMenuItem.Image = global::WindowsFormsApplication1.Properties.Resources.User_Computer;
             this.cambioDeContraseñaToolStripMenuItem.Name = "cambioDeContraseñaToolStripMenuItem";
             this.cambioDeContraseñaToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.cambioDeContraseñaToolStripMenuItem.Text = "Configuracion";
@@ -179,6 +201,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = global::WindowsFormsApplication1.Properties.Resources.fondomenuprincipal1;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(515, 284);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
@@ -211,6 +235,8 @@
         private System.Windows.Forms.ToolStripMenuItem anulacionDeEntradasToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem entradasVendidasPorFechaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem entradasVendidasPorFiestaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
+        private System.Windows.Forms.ToolStripMenuItem salirToolStripMenuItem;
 
     }
 }

@@ -29,7 +29,6 @@ namespace WindowsFormsApplication1
 
         private void Form2_Load(object sender, EventArgs e)
         {
-           
         }
 
         private void archivoToolStripMenuItem_Click(object sender, EventArgs e)
@@ -113,6 +112,14 @@ namespace WindowsFormsApplication1
             }
             else
                 MessageBox.Show("Usted no tiene acceso a esta parte del sistema");
+        }
+
+        private void salirToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("¿Esta seguro que desea salir?", "AVISO", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
         }
     }
 }

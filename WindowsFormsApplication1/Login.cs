@@ -16,6 +16,12 @@ namespace WindowsFormsApplication1
         ControladoraUsuario controladora = new ControladoraUsuario();
         Usuario oUsuario;
 
+        public Usuario OUsuario
+        {
+            get { return oUsuario; }
+            set { oUsuario = value; }
+        }
+
         public Login()
         {
             InitializeComponent();
@@ -35,6 +41,7 @@ namespace WindowsFormsApplication1
                             MenuPrincipal form2 = new MenuPrincipal();
                             form2.OUsuario = oUsuario;
                             form2.Show();
+                            this.Hide();
                         }
                         else
                             MessageBox.Show("Nombre de usuario o contraseña incorrecta");
@@ -53,7 +60,7 @@ namespace WindowsFormsApplication1
 
         private void Login_Load(object sender, EventArgs e)
         {
-
+            
         }
     }
 }

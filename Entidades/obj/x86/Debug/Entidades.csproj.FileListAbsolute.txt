@@ -22,3 +22,9 @@ C:\Users\Fer\Desktop\EntradasOjeaMartinez\Entidades\obj\x86\Debug\Entidades.Prop
 C:\Users\Fer\Desktop\EntradasOjeaMartinez\Entidades\obj\x86\Debug\Entidades.csproj.GenerateResource.Cache
 C:\Users\Fer\Desktop\EntradasOjeaMartinez\Entidades\obj\x86\Debug\Entidades.exe
 C:\Users\Fer\Desktop\EntradasOjeaMartinez\Entidades\obj\x86\Debug\Entidades.pdb
+C:\Users\Nau\Desktop\Entrada\Entradas\Entidades\bin\Debug\Entidades.exe
+C:\Users\Nau\Desktop\Entrada\Entradas\Entidades\bin\Debug\Entidades.pdb
+C:\Users\Nau\Desktop\Entrada\Entradas\Entidades\obj\x86\Debug\Entidades.Properties.Resources.resources
+C:\Users\Nau\Desktop\Entrada\Entradas\Entidades\obj\x86\Debug\Entidades.csproj.GenerateResource.Cache
+C:\Users\Nau\Desktop\Entrada\Entradas\Entidades\obj\x86\Debug\Entidades.exe
+C:\Users\Nau\Desktop\Entrada\Entradas\Entidades\obj\x86\Debug\Entidades.pdb
