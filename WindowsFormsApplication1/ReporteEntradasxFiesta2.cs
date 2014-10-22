@@ -32,13 +32,28 @@ namespace WindowsFormsApplication1
             try
             {
                 txtdisponibles.Text = ControladoraEntradas.CantEntradasDisponibles(fiesta.Id).ToString();
+                lblAnuladas.Text = ControladoraEntradas.CantEntradasAnuladas(fiesta.Id).ToString();
                 txtusadas.Text = ControladoraEntradas.CantEntradasUsadas(fiesta.Id).ToString();
                 txttotal.Text = (ControladoraEntradas.CantEntradasUsadas(fiesta.Id) + ControladoraEntradas.CantEntradasDisponibles(fiesta.Id)).ToString();
                 label1.Text = "Fiesta: " + fiesta.Colegios + "";
-                dataGridView1.DataSource = ControladoraEntradas.TraerEntradasxFiesta(fiesta.Id);
+                List<Entrada> lista = new List<Entrada>();
+                lista =ControladoraEntradas.TraerEntradasxFiesta(fiesta.Id);
+                dataGridView1.DataSource = lista;
+                decimal total = 0;           
+                foreach (Entrada aux in lista)
+                {
+                    total = total + aux.Precio;
+                }
+                lbltotal.Text = total.ToString();
+                
                 dataGridView1.Columns["FiestaID1"].Visible = false;
                 dataGridView1.Columns["Id"].Visible = false;
                 dataGridView1.Columns["USADA"].Visible = false;
+                dataGridView1.Columns[0].HeaderText = "Numero";
+                dataGridView1.Columns[1].HeaderText = "Nombre";
+                dataGridView1.Columns[2].HeaderText = "Apellido";
+                dataGridView1.Columns[4].HeaderText = "Nombre de Fiesta";
+                dataGridView1.Columns[9].HeaderText = "Fecha de Venta";
                 foreach (DataGridViewRow row in dataGridView1.Rows)
                 {
                     if (Convert.ToInt32(row.Cells[6].Value) == 0)
@@ -108,6 +123,11 @@ namespace WindowsFormsApplication1
             {
                 MessageBox.Show(ex.Message);
             }
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
         }
     }
 }

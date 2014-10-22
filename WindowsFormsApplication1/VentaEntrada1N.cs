@@ -60,6 +60,7 @@ namespace WindowsFormsApplication1
              try
              {
             dataGridView1.DataSource = controladoraFiestas.TraerFiestasxColegio(textBox2.Text);
+            dataGridView1.Columns["Id"].Visible = false;
              }
              catch (Exception ex)
              {
@@ -72,6 +73,7 @@ namespace WindowsFormsApplication1
             try
             {
                 dataGridView1.DataSource = controladoraFiestas.TraerFiestasxFecha(dateTimePicker1.Text);
+                dataGridView1.Columns["Id"].Visible = false;
             
             }
             catch (Exception ex)
