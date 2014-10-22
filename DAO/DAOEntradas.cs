@@ -266,11 +266,11 @@ namespace DAO
             conexion.Desconectar();
         }
 
-        public List<Entrada> TraerEntradasxFecha(string fecha)
+        public List<Entrada> TraerEntradasxFecha(string fechadesde, string fechahasta)
         {
             conexion.Conectar();
             List<Entrada> lista = new List<Entrada>();
-            string sentencia = "select * from Entradas1 where fechaventa='"+fecha+"'";
+            string sentencia = "select * from Entradas1 where fechaventa between '" + fechadesde + "' and '" + fechahasta + "'";
             DataTable tabla = conexion.LeerDatos(sentencia);
             foreach (DataRow dr in tabla.Rows)
             {

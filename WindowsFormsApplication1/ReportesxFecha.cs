@@ -29,18 +29,6 @@ namespace WindowsFormsApplication1
             exportaraexcel(dataGridView1);
         }
 
-        private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
-        {
-            try
-            {
-                dataGridView1.DataSource = controladora.TraerEntradasxfecha(dateTimePicker1.Text);
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-        }
-
         public void exportaraexcel(DataGridView tabla)
         {
             if (tabla != null)
@@ -68,6 +56,18 @@ namespace WindowsFormsApplication1
             }
             else
                 MessageBox.Show("No hay datos para exportar");
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                dataGridView1.DataSource = controladora.TraerEntradasxfecha(dateTimePicker1.Text, dateTimePicker2.Text);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
 

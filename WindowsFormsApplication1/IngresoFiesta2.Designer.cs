@@ -78,7 +78,7 @@
             this.txttotal.AutoSize = true;
             this.txttotal.Font = new System.Drawing.Font("Tahoma", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txttotal.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.txttotal.Location = new System.Drawing.Point(1067, 433);
+            this.txttotal.Location = new System.Drawing.Point(1052, 433);
             this.txttotal.Name = "txttotal";
             this.txttotal.Size = new System.Drawing.Size(0, 25);
             this.txttotal.TabIndex = 33;
@@ -99,7 +99,7 @@
             this.txtusadas.AutoSize = true;
             this.txtusadas.Font = new System.Drawing.Font("Tahoma", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtusadas.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.txtusadas.Location = new System.Drawing.Point(1122, 107);
+            this.txtusadas.Location = new System.Drawing.Point(1122, 123);
             this.txtusadas.Name = "txtusadas";
             this.txtusadas.Size = new System.Drawing.Size(0, 25);
             this.txtusadas.TabIndex = 31;
