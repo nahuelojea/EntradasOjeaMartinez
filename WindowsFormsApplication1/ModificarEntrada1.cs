@@ -31,20 +31,31 @@ namespace WindowsFormsApplication1
             try
             {
                 Entrada oEntrada = ControladoraEntrada.TraerEntradaxID(idEntrada);
-                txtdni.Text = oEntrada.DNI.ToString();
-                txtape.Text = oEntrada.APELLIDO.ToString();
-                txtFiesta.Text = oEntrada.Nombrefiesta.ToString();
-                txtnombre.Text = oEntrada.NOMBRE.ToString();
-                txtnro.Text = oEntrada.NRO.ToString();
-                txtprecio.Text = oEntrada.Precio.ToString();
-                if (oEntrada.USADA == 1)
+                if (oEntrada.USADA != 2)
                 {
-                    checkBox1.Checked = true;
+                    txtdni.Text = oEntrada.DNI.ToString();
+                    txtape.Text = oEntrada.APELLIDO.ToString();
+                    txtFiesta.Text = oEntrada.Nombrefiesta.ToString();
+                    txtnombre.Text = oEntrada.NOMBRE.ToString();
+                    txtnro.Text = oEntrada.NRO.ToString();
+                    txtprecio.Text = oEntrada.Precio.ToString();
+                    if (oEntrada.USADA == 1)
+                    {
+                        checkBox1.Checked = true;
+                    }
+                    else
+                    {
+                        checkBox1.Checked = false;
+
+                    }
                 }
                 else
                 {
-                    checkBox1.Checked = false;
-
+                    MessageBox.Show("La entrada se encuentra anulada");
+                    this.Close();
+                    ModificarEntrada form = new ModificarEntrada();
+                    form.Show();
+                    
                 }
             
             }
