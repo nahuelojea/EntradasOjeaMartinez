@@ -14,7 +14,7 @@ namespace DAO
         {
             conexion.Conectar();
             List<Entrada> lista = new List<Entrada>();
-            string sentencia = "select * from Entradas1 where FiestaID=" + ID + "";
+            string sentencia = "select * from Entradas where FiestaID=" + ID + "";
             DataTable tabla = conexion.LeerDatos(sentencia);
             foreach (DataRow dr in tabla.Rows)
             {
@@ -30,7 +30,7 @@ namespace DAO
         {
             conexion.Conectar();
             List<Entrada> lista = new List<Entrada>();
-            string sentencia = "select * from Entradas1 where FiestaID=" + ID + " and DNI like '%" + dni + "%'";
+            string sentencia = "select * from Entradas where FiestaID=" + ID + " and DNI like '%" + dni + "%'";
             DataTable tabla = conexion.LeerDatos(sentencia);
             foreach (DataRow dr in tabla.Rows)
             {
@@ -46,7 +46,7 @@ namespace DAO
         {
             conexion.Conectar();
             List<Entrada> lista = new List<Entrada>();
-            string sentencia = "select * from Entradas1 where FiestaID=" + ID + " and apellido like '%" + apell + "%'";
+            string sentencia = "select * from Entradas where FiestaID=" + ID + " and apellido like '%" + apell + "%'";
             DataTable tabla = conexion.LeerDatos(sentencia);
             foreach (DataRow dr in tabla.Rows)
             {
@@ -62,7 +62,7 @@ namespace DAO
         {
             conexion.Conectar();
             List<Entrada> lista = new List<Entrada>();
-            string sentencia = "select * from Entradas1 where FiestaID=" + ID + " and nro like '%" + num + "%'";
+            string sentencia = "select * from Entradas where FiestaID=" + ID + " and nro like '%" + num + "%'";
             DataTable tabla = conexion.LeerDatos(sentencia);
             foreach (DataRow dr in tabla.Rows)
             {
@@ -78,7 +78,7 @@ namespace DAO
         {
             conexion.Conectar();
             List<Entrada> lista = new List<Entrada>();
-            string sentencia = "select * from Entradas1 where ID=" + ID + "";
+            string sentencia = "select * from Entradas where ID=" + ID + "";
             DataTable tabla = conexion.LeerDatos(sentencia);
             foreach (DataRow dr in tabla.Rows)
             {
@@ -93,7 +93,7 @@ namespace DAO
         public void MarcarEntrada(int ID)
         {
             conexion.Conectar();
-            string sentencia = "update Entradas1 set usado = 1 where ID=" + ID + "";
+            string sentencia = "update Entradas set usado = 1 where ID=" + ID + "";
             conexion.EjecutarSQL(sentencia);
             conexion.Desconectar();
         }
@@ -104,7 +104,7 @@ namespace DAO
         {
             conexion.Conectar();
             List<Entrada> lista = new List<Entrada>();
-            string sentencia = "select * from Entradas1 where DNI like '%" + DNI + "%'";
+            string sentencia = "select * from Entradas where DNI like '%" + DNI + "%'";
             DataTable tabla = conexion.LeerDatos(sentencia);
             foreach (DataRow dr in tabla.Rows)
             {
@@ -121,7 +121,7 @@ namespace DAO
         {
             conexion.Conectar();
             List<Entrada> lista = new List<Entrada>();
-            string sentencia = "select * from Entradas1 where nro like '%" + nro + "%'";
+            string sentencia = "select * from Entradas where nro like '%" + nro + "%'";
             DataTable tabla = conexion.LeerDatos(sentencia);
             foreach (DataRow dr in tabla.Rows)
             {
@@ -138,7 +138,7 @@ namespace DAO
         {
             conexion.Conectar();
             List<Entrada> lista = new List<Entrada>();
-            string sentencia = "select * from Entradas1 where apellido like '%" + Apellido + "%'";
+            string sentencia = "select * from Entradas where apellido like '%" + Apellido + "%'";
             DataTable tabla = conexion.LeerDatos(sentencia);
             foreach (DataRow dr in tabla.Rows)
             {
@@ -154,7 +154,7 @@ namespace DAO
         {
             conexion.Conectar();
             List<Entrada> lista = new List<Entrada>();
-            string sentencia = "select * from Entradas1";
+            string sentencia = "select * from Entradas";
             DataTable tabla = conexion.LeerDatos(sentencia);
             foreach (DataRow dr in tabla.Rows)
             {
@@ -168,7 +168,7 @@ namespace DAO
 
         public int EntradasDisponibles(int idFiesta)
         {
-            string sentencia = "select COUNT(*) as cant from Entradas1 where usado=0 and FiestaID=" + idFiesta + "";
+            string sentencia = "select COUNT(*) as cant from Entradas where usado=0 and FiestaID=" + idFiesta + "";
             conexion.Conectar();
             int cant = 0;
             DataTable tabla = conexion.LeerDatos(sentencia);
@@ -183,7 +183,7 @@ namespace DAO
 
         public int EntradasUsadas(int idFiesta)
         {
-            string sentencia = "select COUNT(*) as cant from Entradas1 where usado=1 and FiestaID=" + idFiesta + "";
+            string sentencia = "select COUNT(*) as cant from Entradas where usado=1 and FiestaID=" + idFiesta + "";
             conexion.Conectar();
             int cant = 0;
             DataTable tabla = conexion.LeerDatos(sentencia);
@@ -198,7 +198,7 @@ namespace DAO
 
         public int EntradasAnuladas(int idFiesta)
         {
-            string sentencia = "select COUNT(*) as cant from Entradas1 where usado=2 and FiestaID=" + idFiesta + "";
+            string sentencia = "select COUNT(*) as cant from Entradas where usado=2 and FiestaID=" + idFiesta + "";
             conexion.Conectar();
             int cant = 0;
             DataTable tabla = conexion.LeerDatos(sentencia);
@@ -216,7 +216,7 @@ namespace DAO
         public void IngresarEntrada(Entrada oEntrada)
         {
 
-            string sentencia = "insert into Entradas1(DNI, apellido, nombre,nro,usado,fiestaID,nombrefiesta, precio, fechaventa) values(" + oEntrada.DNI + ",'" + oEntrada.APELLIDO + "','" + oEntrada.NOMBRE + "'," + oEntrada.NRO + "," + oEntrada.USADA + "," + oEntrada.FiestaID1 + ",'" + oEntrada.Nombrefiesta + "', " + Convert.ToInt32(oEntrada.Precio) + ", '"+oEntrada.Fechaventa+"')";
+            string sentencia = "insert into Entradas(DNI, apellido, nombre,nro,usado,fiestaID,nombrefiesta, precio, fechaventa) values(" + oEntrada.DNI + ",'" + oEntrada.APELLIDO + "','" + oEntrada.NOMBRE + "'," + oEntrada.NRO + "," + oEntrada.USADA + "," + oEntrada.FiestaID1 + ",'" + oEntrada.Nombrefiesta + "', " + Convert.ToInt32(oEntrada.Precio) + ", '"+oEntrada.Fechaventa+"')";
             conexion.Conectar();
             conexion.EjecutarSQL(sentencia);
             conexion.Desconectar();
@@ -230,7 +230,7 @@ namespace DAO
             int id = 0;
             try
             {
-                string sentencia = " select MAX(nro) as nro from Entradas1";
+                string sentencia = " select MAX(nro) as nro from Entradas";
 
                 conexion.Conectar();
                 DataTable tabla = conexion.LeerDatos(sentencia);
@@ -252,7 +252,7 @@ namespace DAO
 
         public void ModificarEntrada(Entrada oEntrada)
         {
-            string sentencia = "update Entradas1 set DNI=" + oEntrada.DNI + ", nombre='" + oEntrada.NOMBRE + "',apellido='" + oEntrada.APELLIDO + "', usado=" + oEntrada.USADA + ", nro= "+oEntrada.NRO+" where ID = " + oEntrada.Id + "";
+            string sentencia = "update Entradas set DNI=" + oEntrada.DNI + ", nombre='" + oEntrada.NOMBRE + "',apellido='" + oEntrada.APELLIDO + "', usado=" + oEntrada.USADA + ", nro= "+oEntrada.NRO+" where ID = " + oEntrada.Id + "";
             conexion.Conectar();
             conexion.EjecutarSQL(sentencia);
             conexion.Desconectar();
@@ -260,7 +260,7 @@ namespace DAO
 
         public void AnularEntrada(int id)
         {
-            string sentencia = " update Entradas1 set usado=2 where ID=" + id + "";
+            string sentencia = " update Entradas set usado=2 where ID=" + id + "";
             conexion.Conectar();
             conexion.EjecutarSQL(sentencia);
             conexion.Desconectar();
@@ -270,7 +270,7 @@ namespace DAO
         {
             conexion.Conectar();
             List<Entrada> lista = new List<Entrada>();
-            string sentencia = "select * from Entradas1 where fechaventa='"+fecha+"'";
+            string sentencia = "select * from Entradas where fechaventa='"+fecha+"'";
             DataTable tabla = conexion.LeerDatos(sentencia);
             foreach (DataRow dr in tabla.Rows)
             {

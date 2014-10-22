@@ -20,8 +20,8 @@ namespace WindowsFormsApplication1
 
         private void button1_Click(object sender, EventArgs e)
         {
-            try
-            {
+            /*try
+            {*/
                 if (textBox1.Text.Length != 0)
                 {
                     if (textBox2.Text.Length != 0)
@@ -41,11 +41,11 @@ namespace WindowsFormsApplication1
                 }
                 else
                     MessageBox.Show("Por favor ingresar el nombre para el salón");
-            }
+          /*  }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
-            }
+            }*/
         }
 
         private void AgregarSalon_Load(object sender, EventArgs e)
