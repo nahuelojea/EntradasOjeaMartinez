@@ -15,5 +15,10 @@ namespace WindowsFormsApplication1
         {
             InitializeComponent();
         }
+
+        private void ConfirmaModifacionNumeracion_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

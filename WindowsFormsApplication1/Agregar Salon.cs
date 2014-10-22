@@ -41,7 +41,7 @@ namespace WindowsFormsApplication1
                 }
                 else
                     MessageBox.Show("Por favor ingresar el nombre para el salón");
-            }
+           }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);

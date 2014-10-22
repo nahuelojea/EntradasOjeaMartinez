@@ -143,5 +143,16 @@ namespace WindowsFormsApplication1
             else
                 MessageBox.Show("Usted no tiene acceso a esta parte del sistema");
         }
+
+        private void entradasVendidasPorFiestaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (oUsuario.Nivel == 2)
+            {
+                ReporteEntradasxFiesta form = new ReporteEntradasxFiesta();
+                form.Show();
+            }
+            else
+                MessageBox.Show("Usted no tiene acceso a esta parte del sistema");
+        }
     }
 }

@@ -6,29 +6,55 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
-using Entidades;
 using Controladora;
+using Entidades;
 
 namespace WindowsFormsApplication1
 {
-    public partial class ReportesxFecha : Form
+    public partial class ReporteEntradasxFiesta2 : Form
     {
-        ControladoraEntradas controladora = new ControladoraEntradas();
-        public ReportesxFecha()
+        ControladoraEntradas ControladoraEntradas = new ControladoraEntradas();
+        Fiesta fiesta;
+
+        public Fiesta Fiesta
+        {
+            get { return fiesta; }
+            set { fiesta = value; }
+        }
+
+        public ReporteEntradasxFiesta2()
         {
             InitializeComponent();
         }
 
-        private void ReportesxFecha_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button2_Click(object sender, EventArgs e)
+        private void ReporteEntradasxFiesta2_Load(object sender, EventArgs e)
         {
             try
             {
-                exportaraexcel(dataGridView1);
+                txtdisponibles.Text = ControladoraEntradas.CantEntradasDisponibles(fiesta.Id).ToString();
+                txtusadas.Text = ControladoraEntradas.CantEntradasUsadas(fiesta.Id).ToString();
+                txttotal.Text = (ControladoraEntradas.CantEntradasUsadas(fiesta.Id) + ControladoraEntradas.CantEntradasDisponibles(fiesta.Id)).ToString();
+                label1.Text = "Fiesta: " + fiesta.Colegios + "";
+                dataGridView1.DataSource = ControladoraEntradas.TraerEntradasxFiesta(fiesta.Id);
+                dataGridView1.Columns["FiestaID1"].Visible = false;
+                dataGridView1.Columns["Id"].Visible = false;
+                dataGridView1.Columns["USADA"].Visible = false;
+                foreach (DataGridViewRow row in dataGridView1.Rows)
+                {
+                    if (Convert.ToInt32(row.Cells[6].Value) == 0)
+                    {
+                        row.DefaultCellStyle.BackColor = Color.Green;
+                    }
+                    if (Convert.ToInt32(row.Cells[6].Value) == 1)
+                    {
+                        row.DefaultCellStyle.BackColor = Color.Red;
+                    }
+                    if (Convert.ToInt32(row.Cells[6].Value) == 2)
+                    {
+                        row.DefaultCellStyle.BackColor = Color.SlateGray;
+                    }
+                }
+
             }
             catch (Exception ex)
             {
@@ -76,14 +102,12 @@ namespace WindowsFormsApplication1
         {
             try
             {
-                dataGridView1.DataSource = controladora.TraerEntradasxfecha(dateTimePicker1.Text, dateTimePicker2.Text);
+                exportaraexcel(dataGridView1);
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
         }
-
-
     }
 }

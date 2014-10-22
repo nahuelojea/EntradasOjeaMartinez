@@ -70,6 +70,7 @@
             this.Controls.Add(this.button1);
             this.Name = "ConfirmaModifacionNumeracion";
             this.Text = "Alerta";
+            this.Load += new System.EventHandler(this.ConfirmaModifacionNumeracion_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

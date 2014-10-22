@@ -52,8 +52,8 @@ namespace WindowsFormsApplication1
 
         private void button1_Click_1(object sender, EventArgs e)
         {
-           /* try
-            {*/
+            try
+            {
                 Entrada oEntrada = new Entrada(Convert.ToInt32(txtdni.Text), txtapellido.Text, txtnombre.Text, Convert.ToInt32(txtnro.Text), 0, IdFiesta, oFiesta.Colegios, Convert.ToDecimal(txtprecio.Text), DateTime.Today.ToShortDateString());
                 if (ControladoraEntradas.VerificarNro(oEntrada.NRO) == false)
                 {
@@ -69,11 +69,11 @@ namespace WindowsFormsApplication1
                 {
                     MessageBox.Show("El numero de entrada ya fue utilizado");
                 }
-           /* }
+            }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
-            }*/
+            }
         }
 
         private void button2_Click_1(object sender, EventArgs e)

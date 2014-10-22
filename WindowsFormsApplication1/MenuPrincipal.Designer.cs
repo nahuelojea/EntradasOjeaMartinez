@@ -181,6 +181,7 @@
             this.entradasVendidasPorFiestaToolStripMenuItem.Name = "entradasVendidasPorFiestaToolStripMenuItem";
             this.entradasVendidasPorFiestaToolStripMenuItem.Size = new System.Drawing.Size(222, 22);
             this.entradasVendidasPorFiestaToolStripMenuItem.Text = "Entradas vendidas por fiesta";
+            this.entradasVendidasPorFiestaToolStripMenuItem.Click += new System.EventHandler(this.entradasVendidasPorFiestaToolStripMenuItem_Click);
             // 
             // usuariosToolStripMenuItem
             // 

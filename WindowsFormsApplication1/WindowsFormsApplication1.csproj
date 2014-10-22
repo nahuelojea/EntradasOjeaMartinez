@@ -196,6 +196,18 @@
     <Compile Include="ModificarSalon.Designer.cs">
       <DependentUpon>ModificarSalon.cs</DependentUpon>
     </Compile>
+    <Compile Include="ReporteEntradasxFiesta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReporteEntradasxFiesta.Designer.cs">
+      <DependentUpon>ReporteEntradasxFiesta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReporteEntradasxFiesta2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReporteEntradasxFiesta2.Designer.cs">
+      <DependentUpon>ReporteEntradasxFiesta2.cs</DependentUpon>
+    </Compile>
     <Compile Include="ReportesxFecha.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -294,6 +306,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ModificarSalon.resx">
       <DependentUpon>ModificarSalon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReporteEntradasxFiesta.resx">
+      <DependentUpon>ReporteEntradasxFiesta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReporteEntradasxFiesta2.resx">
+      <DependentUpon>ReporteEntradasxFiesta2.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ReportesxFecha.resx">
       <DependentUpon>ReportesxFecha.cs</DependentUpon>
