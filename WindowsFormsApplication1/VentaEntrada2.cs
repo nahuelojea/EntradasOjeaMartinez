@@ -43,8 +43,10 @@ namespace WindowsFormsApplication1
         {
             try
             {
+                
             Fiesta oFiesta = ControladoraFiesta.TraerFiestasxID(IdFiesta);
             TxtFiesta.Text = oFiesta.Colegios;
+            lblCantidad.Text = (ControladoraEntradas.CantEntradasDisponibles(oFiesta.Id) + ControladoraEntradas.CantEntradasUsadas(oFiesta.Id)).ToString();
             dataGridView1.DataSource = ControladoraEntradas.TraerEntradasxFiesta(idFiesta);
             dataGridView1.Columns["FiestaID1"].Visible = false;
             dataGridView1.Columns["Id"].Visible = false;

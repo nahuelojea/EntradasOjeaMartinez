@@ -62,7 +62,7 @@ namespace DAO
         {
             conexion.Conectar();
             List<Entrada> lista = new List<Entrada>();
-            string sentencia = "select * from Entradas where FiestaID=" + ID + " and nro like '%" + num + "%'";
+            string sentencia = "select * from Entradas where FiestaID=" + ID + " and nro = "+ num + "";
             DataTable tabla = conexion.LeerDatos(sentencia);
             foreach (DataRow dr in tabla.Rows)
             {
