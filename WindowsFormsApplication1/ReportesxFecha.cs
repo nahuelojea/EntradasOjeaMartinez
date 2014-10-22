@@ -76,12 +76,40 @@ namespace WindowsFormsApplication1
         {
             try
             {
-                dataGridView1.DataSource = controladora.TraerEntradasxfecha(dateTimePicker1.Text, dateTimePicker2.Text);
+                
+                List<Entrada> lista = new List<Entrada>();
+                lista = controladora.TraerEntradasxfecha(dateTimePicker1.Text, dateTimePicker2.Text);
+                dataGridView1.DataSource = lista;
+                decimal total = 0;                          
+                lblCant.Text = lista.Count().ToString();
+                foreach (Entrada aux in lista)
+                {
+                    total = total + aux.Precio;
+                }
+                lbltotal.Text = total.ToString();
+                dataGridView1.Columns["FiestaID1"].Visible = false;
+                dataGridView1.Columns["Id"].Visible = false;
+                dataGridView1.Columns["USADA"].Visible = false;
+                dataGridView1.Columns[0].HeaderText = "Numero";
+                dataGridView1.Columns[1].HeaderText = "Nombre";
+                dataGridView1.Columns[2].HeaderText = "Apellido";
+                dataGridView1.Columns[4].HeaderText = "Nombre de Fiesta";
+                dataGridView1.Columns[9].HeaderText = "Fecha de Venta";
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
+        }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
         }
 
 

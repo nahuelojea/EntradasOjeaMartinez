@@ -43,12 +43,19 @@ namespace WindowsFormsApplication1
         {
             try
             {
+                
             Fiesta oFiesta = ControladoraFiesta.TraerFiestasxID(IdFiesta);
             TxtFiesta.Text = oFiesta.Colegios;
+            lblCantidad.Text = (ControladoraEntradas.CantEntradasDisponibles(oFiesta.Id) + ControladoraEntradas.CantEntradasUsadas(oFiesta.Id)).ToString();
             dataGridView1.DataSource = ControladoraEntradas.TraerEntradasxFiesta(idFiesta);
             dataGridView1.Columns["FiestaID1"].Visible = false;
             dataGridView1.Columns["Id"].Visible = false;
-             dataGridView1.Columns["USADA"].Visible = false;
+            dataGridView1.Columns["USADA"].Visible = false;
+            dataGridView1.Columns[0].HeaderText = "Numero";
+            dataGridView1.Columns[1].HeaderText = "Nombre";
+            dataGridView1.Columns[2].HeaderText = "Apellido";
+            dataGridView1.Columns[4].HeaderText = "Nombre de Fiesta";
+            dataGridView1.Columns[9].HeaderText = "Fecha de Venta";
              foreach (DataGridViewRow row in dataGridView1.Rows)
              {
                  if (Convert.ToInt32(row.Cells[6].Value) == 0)

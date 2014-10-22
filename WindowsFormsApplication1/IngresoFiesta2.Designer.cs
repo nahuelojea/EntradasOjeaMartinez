@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.txttotal = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -44,6 +45,8 @@
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.lblCursos = new System.Windows.Forms.Label();
+            this.lblFecha = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -65,9 +68,9 @@
             this.groupBox1.Controls.Add(this.button1);
             this.groupBox1.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold);
             this.groupBox1.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.groupBox1.Location = new System.Drawing.Point(53, 67);
+            this.groupBox1.Location = new System.Drawing.Point(12, 67);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(1203, 481);
+            this.groupBox1.Size = new System.Drawing.Size(1320, 558);
             this.groupBox1.TabIndex = 7;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Buscar Entrada";
@@ -78,7 +81,7 @@
             this.txttotal.AutoSize = true;
             this.txttotal.Font = new System.Drawing.Font("Tahoma", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txttotal.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.txttotal.Location = new System.Drawing.Point(1052, 433);
+            this.txttotal.Location = new System.Drawing.Point(1154, 514);
             this.txttotal.Name = "txttotal";
             this.txttotal.Size = new System.Drawing.Size(0, 25);
             this.txttotal.TabIndex = 33;
@@ -88,7 +91,7 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Tahoma", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label5.Location = new System.Drawing.Point(980, 433);
+            this.label5.Location = new System.Drawing.Point(1082, 514);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(66, 25);
             this.label5.TabIndex = 32;
@@ -99,7 +102,7 @@
             this.txtusadas.AutoSize = true;
             this.txtusadas.Font = new System.Drawing.Font("Tahoma", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtusadas.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.txtusadas.Location = new System.Drawing.Point(1122, 123);
+            this.txtusadas.Location = new System.Drawing.Point(1224, 101);
             this.txtusadas.Name = "txtusadas";
             this.txtusadas.Size = new System.Drawing.Size(0, 25);
             this.txtusadas.TabIndex = 31;
@@ -109,7 +112,7 @@
             this.txtdisponibles.AutoSize = true;
             this.txtdisponibles.Font = new System.Drawing.Font("Tahoma", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtdisponibles.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.txtdisponibles.Location = new System.Drawing.Point(1122, 58);
+            this.txtdisponibles.Location = new System.Drawing.Point(1224, 36);
             this.txtdisponibles.Name = "txtdisponibles";
             this.txtdisponibles.Size = new System.Drawing.Size(0, 25);
             this.txtdisponibles.TabIndex = 30;
@@ -119,7 +122,7 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Tahoma", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.Gray;
-            this.label4.Location = new System.Drawing.Point(980, 180);
+            this.label4.Location = new System.Drawing.Point(1082, 158);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(97, 25);
             this.label4.TabIndex = 29;
@@ -130,7 +133,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Tahoma", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.label3.Location = new System.Drawing.Point(980, 123);
+            this.label3.Location = new System.Drawing.Point(1082, 101);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(78, 25);
             this.label3.TabIndex = 28;
@@ -141,7 +144,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Tahoma", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.label2.Location = new System.Drawing.Point(980, 58);
+            this.label2.Location = new System.Drawing.Point(1082, 36);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(121, 25);
             this.label2.TabIndex = 27;
@@ -167,11 +170,20 @@
             this.dataGridView1.AllowUserToOrderColumns = true;
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridView1.Location = new System.Drawing.Point(312, 36);
+            this.dataGridView1.MultiSelect = false;
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(629, 422);
+            this.dataGridView1.Size = new System.Drawing.Size(764, 503);
             this.dataGridView1.TabIndex = 24;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             this.dataGridView1.DoubleClick += new System.EventHandler(this.button4_Click);
@@ -188,6 +200,7 @@
             this.radioButton3.TabStop = true;
             this.radioButton3.Text = "Nro Entrada";
             this.radioButton3.UseVisualStyleBackColor = true;
+            this.radioButton3.CheckedChanged += new System.EventHandler(this.radioButton3_CheckedChanged);
             // 
             // radioButton1
             // 
@@ -225,11 +238,11 @@
             // button2
             // 
             this.button2.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold);
-            this.button2.Location = new System.Drawing.Point(1258, 554);
+            this.button2.Location = new System.Drawing.Point(1247, 631);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(103, 42);
             this.button2.TabIndex = 21;
-            this.button2.Text = "Cancelar";
+            this.button2.Text = "Cerrar";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
@@ -237,23 +250,46 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Tahoma", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(579, 29);
+            this.label1.Location = new System.Drawing.Point(98, 23);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(75, 25);
             this.label1.TabIndex = 22;
             this.label1.Text = "Fiesta";
             // 
+            // lblCursos
+            // 
+            this.lblCursos.AutoSize = true;
+            this.lblCursos.Font = new System.Drawing.Font("Tahoma", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCursos.Location = new System.Drawing.Point(613, 23);
+            this.lblCursos.Name = "lblCursos";
+            this.lblCursos.Size = new System.Drawing.Size(83, 25);
+            this.lblCursos.TabIndex = 23;
+            this.lblCursos.Text = "Cursos";
+            // 
+            // lblFecha
+            // 
+            this.lblFecha.AutoSize = true;
+            this.lblFecha.Font = new System.Drawing.Font("Tahoma", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFecha.Location = new System.Drawing.Point(988, 23);
+            this.lblFecha.Name = "lblFecha";
+            this.lblFecha.Size = new System.Drawing.Size(73, 25);
+            this.lblFecha.TabIndex = 24;
+            this.lblFecha.Text = "Fecha";
+            // 
             // IngresoFiesta2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1362, 608);
+            this.ClientSize = new System.Drawing.Size(1362, 685);
+            this.Controls.Add(this.lblFecha);
+            this.Controls.Add(this.lblCursos);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.groupBox1);
             this.Name = "IngresoFiesta2";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Form8";
+            this.Text = "Ingreso";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.IngresoFiesta2_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
@@ -281,6 +317,8 @@
         private System.Windows.Forms.Label txtdisponibles;
         private System.Windows.Forms.Label txttotal;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label lblCursos;
+        private System.Windows.Forms.Label lblFecha;
 
     }
 }

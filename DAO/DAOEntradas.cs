@@ -62,7 +62,7 @@ namespace DAO
         {
             conexion.Conectar();
             List<Entrada> lista = new List<Entrada>();
-            string sentencia = "select * from Entradas where FiestaID=" + ID + " and nro like '%" + num + "%'";
+            string sentencia = "select * from Entradas where FiestaID=" + ID + " and nro = "+ num + "";
             DataTable tabla = conexion.LeerDatos(sentencia);
             foreach (DataRow dr in tabla.Rows)
             {
@@ -260,7 +260,7 @@ namespace DAO
 
         public void AnularEntrada(int id)
         {
-            string sentencia = " update Entradas set usado=2 where ID=" + id + "";
+            string sentencia = " update Entradas set usado=2, precio=0 where ID=" + id + "";
             conexion.Conectar();
             conexion.EjecutarSQL(sentencia);
             conexion.Desconectar();
@@ -270,7 +270,7 @@ namespace DAO
         {
             conexion.Conectar();
             List<Entrada> lista = new List<Entrada>();
-            string sentencia = "select * from Entradas1 where fechaventa between '" + fechadesde + "' and '" + fechahasta + "'";
+            string sentencia = "select * from Entradas where fechaventa between '" + fechadesde + "' and '" + fechahasta + "'";
             DataTable tabla = conexion.LeerDatos(sentencia);
             foreach (DataRow dr in tabla.Rows)
             {

@@ -264,3 +264,5 @@ C:\Users\Nau\Desktop\Entrada\Entradas\WindowsFormsApplication1\obj\x86\Debug\Win
 C:\Users\Fer\Desktop\EntradasOjeaMartinez\WindowsFormsApplication1\obj\x86\Debug\WindowsFormsApplication1.ReportesxFecha.resources
 C:\Users\Nau\Desktop\Entrada\Entradas\WindowsFormsApplication1\obj\x86\Debug\WindowsFormsApplication1.ReporteEntradasxFiesta.resources
 C:\Users\Nau\Desktop\Entrada\Entradas\WindowsFormsApplication1\obj\x86\Debug\WindowsFormsApplication1.ReporteEntradasxFiesta2.resources
+C:\Users\Fer\Desktop\EntradasOjeaMartinez\WindowsFormsApplication1\obj\x86\Debug\WindowsFormsApplication1.ReporteEntradasxFiesta.resources
+C:\Users\Fer\Desktop\EntradasOjeaMartinez\WindowsFormsApplication1\obj\x86\Debug\WindowsFormsApplication1.ReporteEntradasxFiesta2.resources

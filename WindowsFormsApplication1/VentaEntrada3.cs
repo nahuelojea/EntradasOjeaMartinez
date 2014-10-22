@@ -32,6 +32,7 @@ namespace WindowsFormsApplication1
         {
             try
             {
+            
             oFiesta = ControladoraFiesta.TraerFiestasxID(idFiesta);
             txtFiesta.Text = oFiesta.Colegios;
             txtprecio.Text = oFiesta.Precio.ToString();
@@ -52,28 +53,31 @@ namespace WindowsFormsApplication1
 
         private void button1_Click_1(object sender, EventArgs e)
         {
-            try
-            {
-                Entrada oEntrada = new Entrada(Convert.ToInt32(txtdni.Text), txtapellido.Text, txtnombre.Text, Convert.ToInt32(txtnro.Text), 0, IdFiesta, oFiesta.Colegios, Convert.ToDecimal(txtprecio.Text), DateTime.Today.ToShortDateString());
-                if (ControladoraEntradas.VerificarNro(oEntrada.NRO) == false)
+            
+                try
                 {
+                    Entrada oEntrada = new Entrada(Convert.ToInt32(txtdni.Text), txtapellido.Text, txtnombre.Text, Convert.ToInt32(txtnro.Text), 0, IdFiesta, oFiesta.Colegios, Convert.ToDecimal(txtprecio.Text), DateTime.Today.ToShortDateString());
+                    if (ControladoraEntradas.VerificarNro(oEntrada.NRO) == false)
+                    {
 
-                    ControladoraEntradas.InsertarEntrada(oEntrada);
-                    MessageBox.Show("Entrada Vendida con Éxito");
-                    this.Close();
-                    VentaEntrada2 form = new VentaEntrada2();
-                    form.IdFiesta = idFiesta;
-                    form.Show();
+                        ControladoraEntradas.InsertarEntrada(oEntrada);
+                        MessageBox.Show("Entrada Vendida con Éxito");
+                       this.Close();
+                        VentaEntrada2 form = new VentaEntrada2();
+                        form.IdFiesta = idFiesta;
+                        form.Show();
+                    }
+                    else
+                    {
+                        MessageBox.Show("El numero de entrada ya fue utilizado");
+                    }
                 }
-                else
+                catch (Exception ex)
                 {
-                    MessageBox.Show("El numero de entrada ya fue utilizado");
+                    MessageBox.Show(ex.Message);
                 }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
+                
+            
         }
 
         private void button2_Click_1(object sender, EventArgs e)
@@ -84,6 +88,16 @@ namespace WindowsFormsApplication1
         private void txtnro_TextChanged(object sender, EventArgs e)
         {
             
+        }
+
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBox1.Checked == true)
+            {
+                txtnro.Enabled = true;
+            }
+            else
+                txtnro.Enabled = false;
         }
     }
 }

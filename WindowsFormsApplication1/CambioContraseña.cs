@@ -62,12 +62,19 @@ namespace WindowsFormsApplication1
             {
                 if (textBox1.Text == textBox2.Text)
                 {
-                    oUsuario.Contraseña = textBox1.Text;
-                    oUsuario.Nivel = Convert.ToInt32(comboBox1.Text);
-                    controladora.Modificar(oUsuario);
-                    MessageBox.Show("Cambio Realizado");
-                    textBox1.Clear();
-                    textBox2.Clear();
+                    if (textBox1.TextLength > 0)
+                    {
+                        oUsuario.Contraseña = textBox1.Text;
+                        oUsuario.Nivel = Convert.ToInt32(comboBox1.Text);
+                        controladora.Modificar(oUsuario);
+                        MessageBox.Show("Cambio Realizado");
+                        textBox1.Clear();
+                        textBox2.Clear();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Debe ingresar la contraseña");
+                    }
                 }
                 else
                     MessageBox.Show("Las contraseñas deben ser iguales");
