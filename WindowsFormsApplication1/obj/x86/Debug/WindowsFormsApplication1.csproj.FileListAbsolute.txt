@@ -266,3 +266,6 @@ C:\Users\Nau\Desktop\Entrada\Entradas\WindowsFormsApplication1\obj\x86\Debug\Win
 C:\Users\Nau\Desktop\Entrada\Entradas\WindowsFormsApplication1\obj\x86\Debug\WindowsFormsApplication1.ReporteEntradasxFiesta2.resources
 C:\Users\Fer\Desktop\EntradasOjeaMartinez\WindowsFormsApplication1\obj\x86\Debug\WindowsFormsApplication1.ReporteEntradasxFiesta.resources
 C:\Users\Fer\Desktop\EntradasOjeaMartinez\WindowsFormsApplication1\obj\x86\Debug\WindowsFormsApplication1.ReporteEntradasxFiesta2.resources
+C:\Users\Nau\Desktop\Entrada\Entradas\WindowsFormsApplication1\bin\Debug\itextsharp.dll
+C:\Users\Nau\Desktop\Entrada\Entradas\WindowsFormsApplication1\bin\Debug\itextsharp.pdfa.dll
+C:\Users\Nau\Desktop\Entrada\Entradas\WindowsFormsApplication1\bin\Debug\itextsharp.xml

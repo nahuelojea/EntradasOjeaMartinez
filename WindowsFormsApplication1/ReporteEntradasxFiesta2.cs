@@ -8,6 +8,14 @@ using System.Text;
 using System.Windows.Forms;
 using Controladora;
 using Entidades;
+using iTextSharp.text;
+using iTextSharp.text.pdf;
+using iTextSharp.text.html;
+using iTextSharp.text.html.simpleparser;
+using System.IO;
+using System.Data;
+using System.Reflection;
+
 
 namespace WindowsFormsApplication1
 {
@@ -129,5 +137,99 @@ namespace WindowsFormsApplication1
         {
 
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                //Creating iTextSharp Table from the DataTable data
+                PdfPTable pdfTable = new PdfPTable(dataGridView1.ColumnCount);
+                pdfTable.DefaultCell.Padding = 3;
+                pdfTable.WidthPercentage = 30;
+                pdfTable.HorizontalAlignment = Element.ALIGN_LEFT;
+                pdfTable.DefaultCell.BorderWidth = 1;
+
+                //Adding Header row
+                foreach (DataGridViewColumn column in dataGridView1.Columns)
+                {
+                    PdfPCell cell = new PdfPCell(new Phrase(column.HeaderText));
+                    cell.BackgroundColor = new iTextSharp.text.Color(240, 240, 240);
+                    pdfTable.AddCell(cell);
+                }
+
+                //Adding DataRow
+                foreach (DataGridViewRow row in dataGridView1.Rows)
+                {
+                    foreach (DataGridViewCell cell in row.Cells)
+                    {
+                        pdfTable.AddCell(cell.Value.ToString());
+                    }
+                }
+
+                //Exporting to PDF
+                string folderPath = "C:\\PDFs\\";
+                if (!Directory.Exists(folderPath))
+                {
+                    Directory.CreateDirectory(folderPath);
+                }
+                using (FileStream stream = new FileStream(folderPath + "Entradas Por Fiesta.pdf", FileMode.Create))
+                {
+                    Document pdfDoc = new Document(PageSize.A2, 10f, 10f, 10f, 0f);
+                    PdfWriter.GetInstance(pdfDoc, stream);
+                    pdfDoc.Open();
+                    pdfDoc.Add(pdfTable);
+                    pdfDoc.Close();
+                    stream.Close();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+        private void btnExport_Click(object sender, EventArgs e)
+        {
+            Document doc = new Document(iTextSharp.text.PageSize.LETTER, 10, 10, 42, 35);
+            PdfWriter wri = PdfWriter.GetInstance(doc, new FileStream("d:\\Test.pdf", FileMode.Create));
+
+            doc.Open();//Open Document to write
+
+
+            Paragraph paragraph = new Paragraph("data Exported From DataGridview!");
+
+            //Create table by setting table value
+
+            Table t1 = new Table(2);
+            DataTable dt = (DataTable)dataGridView1.DataSource;
+
+            //Create Table Header
+
+            Cell cid = new Cell("ID");
+            Cell cname = new Cell("Name");
+
+            t1.AddCell(cid);
+            t1.AddCell(cname);
+
+            foreach (DataGridViewRow rows in dataGridView1.Rows)
+            {
+
+                string id = dataGridView1.Rows[rows.Index].Cells["empid"].Value.ToString();
+                string name = dataGridView1.Rows[rows.Index].Cells["ename"].Value.ToString();
+                //Create Cells
+                Cell c2 = new Cell(id);
+                Cell c1 = new Cell(name);
+                //Adding cells
+                t1.AddCell(c1);
+                t1.AddCell(c2);
+
+            }
+            doc.Add(paragraph);
+            doc.Add(t1);
+            doc.Close(); //Close document
+            //
+            MessageBox.Show("PDF Created!");
+        }
+
+
     }
 }
