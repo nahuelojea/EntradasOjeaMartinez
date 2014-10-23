@@ -89,7 +89,7 @@
             this.Controls.Add(this.button1);
             this.Name = "AgregarSalon";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "AgregarSalon";
+            this.Text = "Agregar Salon";
             this.Load += new System.EventHandler(this.AgregarSalon_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

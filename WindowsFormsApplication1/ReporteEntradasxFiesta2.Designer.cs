@@ -249,7 +249,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.groupBox1);
             this.Name = "ReporteEntradasxFiesta2";
-            this.Text = "Entradas Vendidas Por Fiesta";
+            this.Text = "Listado de Entradas por Fiesta";
             this.Load += new System.EventHandler(this.ReporteEntradasxFiesta2_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();

@@ -46,22 +46,18 @@
             this.entradasVendidasPorFiestaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.usuariosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cambioDeContraseñaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.menuStrip1.SuspendLayout();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // menuStrip1
             // 
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.archivoToolStripMenuItem,
-            this.ventaToolStripMenuItem,
-            this.ingresoToolStripMenuItem,
-            this.listadosToolStripMenuItem,
-            this.usuariosToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(515, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(806, 24);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
+            this.menuStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.menuStrip1_ItemClicked);
             // 
             // archivoToolStripMenuItem
             // 
@@ -104,7 +100,6 @@
             // 
             // salirToolStripMenuItem
             // 
-            this.salirToolStripMenuItem.Image = global::WindowsFormsApplication1.Properties.Resources.Logout_Icon_16;
             this.salirToolStripMenuItem.Name = "salirToolStripMenuItem";
             this.salirToolStripMenuItem.Size = new System.Drawing.Size(120, 22);
             this.salirToolStripMenuItem.Text = "Salir";
@@ -122,7 +117,6 @@
             // 
             // ventaDeEntradasToolStripMenuItem
             // 
-            this.ventaDeEntradasToolStripMenuItem.Image = global::WindowsFormsApplication1.Properties.Resources.Cash_register_Icon_16;
             this.ventaDeEntradasToolStripMenuItem.Name = "ventaDeEntradasToolStripMenuItem";
             this.ventaDeEntradasToolStripMenuItem.Size = new System.Drawing.Size(208, 22);
             this.ventaDeEntradasToolStripMenuItem.Text = "Venta de entradas";
@@ -152,7 +146,6 @@
             // 
             // ingresoALaFiestaToolStripMenuItem
             // 
-            this.ingresoALaFiestaToolStripMenuItem.Image = global::WindowsFormsApplication1.Properties.Resources.Check_Icon_161;
             this.ingresoALaFiestaToolStripMenuItem.Name = "ingresoALaFiestaToolStripMenuItem";
             this.ingresoALaFiestaToolStripMenuItem.Size = new System.Drawing.Size(165, 22);
             this.ingresoALaFiestaToolStripMenuItem.Text = "Ingreso a la fiesta";
@@ -169,7 +162,6 @@
             // 
             // entradasVendidasPorFechaToolStripMenuItem
             // 
-            this.entradasVendidasPorFechaToolStripMenuItem.Image = global::WindowsFormsApplication1.Properties.Resources.MS_Office_2003_Excel_Icon_16;
             this.entradasVendidasPorFechaToolStripMenuItem.Name = "entradasVendidasPorFechaToolStripMenuItem";
             this.entradasVendidasPorFechaToolStripMenuItem.Size = new System.Drawing.Size(222, 22);
             this.entradasVendidasPorFechaToolStripMenuItem.Text = "Entradas vendidas por fecha";
@@ -177,7 +169,6 @@
             // 
             // entradasVendidasPorFiestaToolStripMenuItem
             // 
-            this.entradasVendidasPorFiestaToolStripMenuItem.Image = global::WindowsFormsApplication1.Properties.Resources.MS_Office_2003_Excel_Icon_16;
             this.entradasVendidasPorFiestaToolStripMenuItem.Name = "entradasVendidasPorFiestaToolStripMenuItem";
             this.entradasVendidasPorFiestaToolStripMenuItem.Size = new System.Drawing.Size(222, 22);
             this.entradasVendidasPorFiestaToolStripMenuItem.Text = "Entradas vendidas por fiesta";
@@ -193,11 +184,33 @@
             // 
             // cambioDeContraseñaToolStripMenuItem
             // 
-            this.cambioDeContraseñaToolStripMenuItem.Image = global::WindowsFormsApplication1.Properties.Resources.User_Computer;
             this.cambioDeContraseñaToolStripMenuItem.Name = "cambioDeContraseñaToolStripMenuItem";
             this.cambioDeContraseñaToolStripMenuItem.Size = new System.Drawing.Size(150, 22);
             this.cambioDeContraseñaToolStripMenuItem.Text = "Configuracion";
             this.cambioDeContraseñaToolStripMenuItem.Click += new System.EventHandler(this.cambioDeContraseñaToolStripMenuItem_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.SystemColors.Desktop;
+            this.label1.ForeColor = System.Drawing.SystemColors.Info;
+            this.label1.Location = new System.Drawing.Point(12, 330);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(79, 13);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "Usuario Activo:";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.SystemColors.Desktop;
+            this.label2.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.label2.ForeColor = System.Drawing.SystemColors.Info;
+            this.label2.Location = new System.Drawing.Point(97, 330);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(43, 13);
+            this.label2.TabIndex = 2;
+            this.label2.Text = "Usuario";
             // 
             // MenuPrincipal
             // 
@@ -205,16 +218,16 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::WindowsFormsApplication1.Properties.Resources.fondomenuprincipal1;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(515, 284);
+            this.ClientSize = new System.Drawing.Size(806, 496);
             this.ControlBox = false;
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "MenuPrincipal";
             this.Text = "Eventos de Egresados";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Form2_Load);
-            this.menuStrip1.ResumeLayout(false);
-            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -240,6 +253,8 @@
         private System.Windows.Forms.ToolStripMenuItem entradasVendidasPorFiestaToolStripMenuItem;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
         private System.Windows.Forms.ToolStripMenuItem salirToolStripMenuItem;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
 
     }
 }

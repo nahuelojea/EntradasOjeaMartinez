@@ -236,7 +236,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnmodificar);
             this.Name = "ModificarEntrada1";
-            this.Text = "ModificarEntrada1";
+            this.Text = "Modificar Entrada";
             this.Load += new System.EventHandler(this.ModificarEntrada1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

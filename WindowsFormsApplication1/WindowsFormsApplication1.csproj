@@ -51,6 +51,9 @@
   <PropertyGroup>
     <StartupObject>WindowsFormsApplication1.Program</StartupObject>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Check_Icon_64.ico</ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="itextsharp">
       <HintPath>..\..\..\itextsharp.dll</HintPath>
@@ -459,6 +462,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\MS_Office_2003_Excel_Icon_16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Check_Icon_64.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -201,7 +201,7 @@
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "IngresoFiesta3";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "IngresoFiesta3";
+            this.Text = "Ingreso a Fiestas";
             this.Load += new System.EventHandler(this.IngresoFiesta3_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

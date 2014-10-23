@@ -209,7 +209,7 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.dateTimePicker1);
             this.Name = "ReportesxFecha";
-            this.Text = "Exportar";
+            this.Text = "Listado de Entradas por Fecha";
             this.Load += new System.EventHandler(this.ReportesxFecha_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);

@@ -174,7 +174,7 @@ namespace WindowsFormsApplication1
                 }
                 using (FileStream stream = new FileStream(folderPath + "Entradas Por Fiesta.pdf", FileMode.Create))
                 {
-                    Document pdfDoc = new Document(PageSize.A2, 10f, 10f, 10f, 0f);
+                    Document pdfDoc = new Document(PageSize.A2, 20f, 20f, 20f, 20f);
                     PdfWriter.GetInstance(pdfDoc, stream);
                     pdfDoc.Open();
                     pdfDoc.Add(pdfTable);

@@ -15,6 +15,7 @@ namespace WindowsFormsApplication1
     {
         ControladoraUsuario ControladoraUsuario = new ControladoraUsuario();
         Usuario oUsuario;
+        
 
         public Usuario OUsuario
         {
@@ -25,10 +26,13 @@ namespace WindowsFormsApplication1
         public MenuPrincipal()
         {
             InitializeComponent();
+            this.Visible = false;
         }
 
         private void Form2_Load(object sender, EventArgs e)
         {
+            label2.Text = oUsuario.Nombre;
+            this.Visible = true;
         }
 
         private void formFactura_FormClosing(object sender, FormClosingEventArgs e)
@@ -153,6 +157,11 @@ namespace WindowsFormsApplication1
             }
             else
                 MessageBox.Show("Usted no tiene acceso a esta parte del sistema");
+        }
+
+        private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
         }
     }
 }

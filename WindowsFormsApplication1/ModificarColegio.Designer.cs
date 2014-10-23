@@ -68,7 +68,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.BotonModificar);
             this.Name = "ModificarColegio";
-            this.Text = "ModificarColegio";
+            this.Text = "Modificar Colegio";
             this.Load += new System.EventHandler(this.ModificarColegio_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
